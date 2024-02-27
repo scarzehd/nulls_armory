@@ -16,9 +16,7 @@ public class ModItems {
         OtherworldlyWeapons.LOGGER.info("Registering Mod Items");
     }
 
-    public static Item TEST_SWORD = registerItem("test_sword", new SwordItem(ToolMaterials.DIAMOND, 20, 2.5f, new FabricItemSettings().maxCount(1).maxDamage(1000)));
-
-    public static Item TRUE_KNIFE = registerItem("true_knife", new TrueKnifeSwordItem(ToolMaterials.DIAMOND, 1, 2, new FabricItemSettings().maxCount(1).maxDamage(1000)));
+    public static Item TRUE_KNIFE = registerItem("true_knife", new TrueKnifeSwordItem(ToolMaterials.DIAMOND, 1, 2.5f, new FabricItemSettings().maxCount(1).maxDamage(1000)));
 
     public static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(OtherworldlyWeapons.MOD_ID, name), item);

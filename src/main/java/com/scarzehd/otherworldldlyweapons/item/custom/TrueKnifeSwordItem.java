@@ -34,34 +34,32 @@ public class TrueKnifeSwordItem extends SwordItem {
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
         if (!world.isClient()) {
             if (entity instanceof PlayerEntity player) {
-                if (selected) {
-                    NbtCompound stackNbt = stack.getOrCreateNbt();
+                NbtCompound stackNbt = stack.getOrCreateNbt();
 
-                    if (!stackNbt.contains("AttributeModifiers", NbtElement.LIST_TYPE)) {
-                        stackNbt.put("AttributeModifiers", new NbtList());
-                    }
-
-                    NbtList modifierNbt = stackNbt.getList("AttributeModifiers", NbtElement.COMPOUND_TYPE);
-
-                    NbtList newModifierNbt = new NbtList();
-
-                    double value = (double)Math.round(Math.log(player.experienceLevel + 1) * 2) / 2;
-
-                    for (int i = 0; i < modifierNbt.size(); i++) {
-                        NbtCompound element = modifierNbt.getCompound(i);
-                        if (!element.getUuid("UUID").equals(modifierId)) {
-//                            OtherworldlyWeapons.LOGGER.info(element.getUuid("UUID").equals(modifierId) + "");
-                            newModifierNbt.add(element);
-                        }
-                    }
-
-                    NbtCompound modifier = new EntityAttributeModifier(modifierId, modifierName, value, EntityAttributeModifier.Operation.ADDITION).toNbt();
-                    modifier.putString("AttributeName", Registries.ATTRIBUTE.getId(EntityAttributes.GENERIC_ATTACK_DAMAGE).toString());
-                    modifier.putString("Slot", EquipmentSlot.MAINHAND.getName());
-
-                    newModifierNbt.add(modifier);
-                    stackNbt.put("AttributeModifiers", newModifierNbt);
+                if (!stackNbt.contains("AttributeModifiers", NbtElement.LIST_TYPE)) {
+                    stackNbt.put("AttributeModifiers", new NbtList());
                 }
+
+                NbtList modifierNbt = stackNbt.getList("AttributeModifiers", NbtElement.COMPOUND_TYPE);
+
+                NbtList newModifierNbt = new NbtList();
+
+                double value = (double)Math.round(Math.log(player.experienceLevel + 1) * 2.5) / 2;
+
+                for (int i = 0; i < modifierNbt.size(); i++) {
+                    NbtCompound element = modifierNbt.getCompound(i);
+                    if (!element.getUuid("UUID").equals(modifierId)) {
+//                            OtherworldlyWeapons.LOGGER.info(element.getUuid("UUID").equals(modifierId) + "");
+                        newModifierNbt.add(element);
+                    }
+                }
+
+                NbtCompound modifier = new EntityAttributeModifier(modifierId, modifierName, value, EntityAttributeModifier.Operation.ADDITION).toNbt();
+                modifier.putString("AttributeName", Registries.ATTRIBUTE.getId(EntityAttributes.GENERIC_ATTACK_DAMAGE).toString());
+                modifier.putString("Slot", EquipmentSlot.MAINHAND.getName());
+
+                newModifierNbt.add(modifier);
+                stackNbt.put("AttributeModifiers", newModifierNbt);
             }
         }
 
