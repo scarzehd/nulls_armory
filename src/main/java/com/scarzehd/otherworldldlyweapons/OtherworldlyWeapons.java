@@ -12,7 +12,6 @@ public class OtherworldlyWeapons implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		LOGGER.info("Registering Mod Items");
 		ModItems.registerItems();
 	}
 }
