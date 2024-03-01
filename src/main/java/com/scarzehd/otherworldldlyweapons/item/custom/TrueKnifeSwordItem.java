@@ -44,7 +44,7 @@ public class TrueKnifeSwordItem extends SwordItem {
 
                 NbtList newModifierNbt = new NbtList();
 
-                double value = (double)Math.round(Math.log(player.experienceLevel + 1) * 2.5) / 2;
+                double value = (double)Math.round(Math.log(player.experienceLevel + 1) * 2) / 2;
 
                 for (int i = 0; i < modifierNbt.size(); i++) {
                     NbtCompound element = modifierNbt.getCompound(i);

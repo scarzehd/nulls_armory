@@ -1,6 +1,7 @@
 package com.scarzehd.otherworldldlyweapons.item;
 
 import com.scarzehd.otherworldldlyweapons.OtherworldlyWeapons;
+import com.scarzehd.otherworldldlyweapons.item.custom.OrthosPrimeSwordItem;
 import com.scarzehd.otherworldldlyweapons.item.custom.TrueKnifeSwordItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.Item;
@@ -16,7 +17,11 @@ public class ModItems {
         OtherworldlyWeapons.LOGGER.info("Registering Mod Items");
     }
 
-    public static Item TRUE_KNIFE = registerItem("true_knife", new TrueKnifeSwordItem(ToolMaterials.DIAMOND, 1, 2.5f, new FabricItemSettings().maxCount(1).maxDamage(1000)));
+    public static final Item TRUE_KNIFE = registerItem("true_knife", new TrueKnifeSwordItem(ToolMaterials.DIAMOND, 1, 2.5f, new FabricItemSettings().maxCount(1).maxDamage(1000)));
+
+    public static final Item CRUCIBLE = registerItem("crucible", new SwordItem(ToolMaterials.DIAMOND, 7, -2f, new FabricItemSettings().maxCount(1).maxDamage(1000)));
+
+    public static final Item ORTHOS_PRIME = registerItem("orthos_prime", new OrthosPrimeSwordItem(ToolMaterials.DIAMOND, 5, -1f, new FabricItemSettings().maxCount(1).maxDamage(1000)));
 
     public static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(OtherworldlyWeapons.MOD_ID, name), item);

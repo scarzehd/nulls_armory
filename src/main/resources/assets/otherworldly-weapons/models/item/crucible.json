@@ -1,0 +1,31 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "otherworldly-weapons:item/crucible"
+  },
+  "display": {
+    "thirdperson_righthand": {
+      "rotation": [13, -90, 55],
+      "translation": [0, 12, 3.25],
+      "scale": [2, 2, 0.85]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [102, -90, 55],
+      "translation": [0, 12, 3.25],
+      "scale": [2, 2, 0.85]
+    },
+    "firstperson_righthand": {
+      "rotation": [13, -90, 55],
+      "translation": [0, 12, 3.25],
+      "scale": [2, 2, 0.85]
+    },
+    "firstperson_lefthand": {
+      "rotation": [102, -90, 55],
+      "translation": [0, 12, 3.25],
+      "scale": [2, 2, 0.85]
+    },
+    "ground": {
+      "translation": [0, 5.5, 0]
+    }
+  }
+}
