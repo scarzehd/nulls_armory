@@ -1,5 +1,10 @@
 {
   "item.otherworldly-weapons.crucible": "Crucible",
   "item.otherworldly-weapons.true_knife": "True Knife",
-  "item.otherworldly-weapons.orthos_prime": "Orthos Prime"
+  "item.otherworldly-weapons.orthos_prime": "Orthos Prime",
+
+  "item.otherworldly-weapons.voidgel_orb": "Voidgel Orb",
+  "item.otherworldly-weapons.voidshell_ingot": "Voidshell Ingot",
+
+  "block.otherworldly-weapons.void_ore": "Void Ore"
 }

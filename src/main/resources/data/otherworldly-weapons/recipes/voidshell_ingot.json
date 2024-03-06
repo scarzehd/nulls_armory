@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "otherworldly-weapons:voidgel_orb"
+    },
+    {
+      "item": "otherworldly-weapons:voidgel_orb"
+    },
+    {
+      "item": "otherworldly-weapons:voidgel_orb"
+    },
+    {
+      "item": "otherworldly-weapons:voidgel_orb"
+    },
+    {
+    "item": "minecraft:copper_ingot"
+    }
+  ],
+  "result": {
+    "item": "otherworldly-weapons:voidshell_ingot",
+    "count": 1
+  }
+}
