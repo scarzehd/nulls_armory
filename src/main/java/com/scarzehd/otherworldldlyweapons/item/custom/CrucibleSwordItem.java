@@ -2,11 +2,17 @@ package com.scarzehd.otherworldldlyweapons.item.custom;
 
 import com.scarzehd.otherworldldlyweapons.ModTags;
 import com.scarzehd.otherworldldlyweapons.OtherworldlyWeapons;
+import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageTypes;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
+import net.minecraft.text.Text;
+import net.minecraft.world.World;
+import org.jetbrains.annotations.Nullable;
+
+import java.util.List;
 
 public class CrucibleSwordItem extends SwordItem {
     private static final float NETHER_MOB_DAMAGE_MODIFIER = 1.5f; // the damage against nether mobs expressed as a multiplier of the base damage
@@ -23,5 +29,12 @@ public class CrucibleSwordItem extends SwordItem {
         }
 
         return super.postHit(stack, target, attacker);
+    }
+
+    @Override
+    public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
+        tooltip.add(Text.translatable("tooltip.otherworldly-weapons.crucible"));
+
+        super.appendTooltip(stack, world, tooltip, context);
     }
 }

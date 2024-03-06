@@ -6,5 +6,7 @@
   "item.otherworldly-weapons.voidgel_orb": "Voidgel Orb",
   "item.otherworldly-weapons.voidshell_ingot": "Voidshell Ingot",
 
-  "block.otherworldly-weapons.void_ore": "Void Ore"
+  "block.otherworldly-weapons.void_ore": "Void Ore",
+
+  "tooltip.otherworldly-weapons.crucible": "It is said that the Crucible is especially painful for Nether mobs..."
 }
