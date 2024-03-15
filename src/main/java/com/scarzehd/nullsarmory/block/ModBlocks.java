@@ -1,0 +1,25 @@
+package com.scarzehd.nullsarmory.block;
+
+import com.scarzehd.nullsarmory.NullsArmory;
+import com.scarzehd.nullsarmory.item.ModItems;
+import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.minecraft.block.Block;
+import net.minecraft.item.BlockItem;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
+import net.minecraft.util.Identifier;
+
+public class ModBlocks {
+    public static void registerBlocks() {
+        NullsArmory.LOGGER.info("Registering Mod Blocks");
+    }
+
+    public static Block registerBlock(String name, Block block) {
+        Block registered_block = Registry.register(Registries.BLOCK, new Identifier(NullsArmory.MOD_ID, name), block);
+        ModItems.registerItem(name, new BlockItem(registered_block, new FabricItemSettings()));
+        return registered_block;
+    }
+
+    public static final Block VOID_ORE = registerBlock("void_ore", new Block(FabricBlockSettings.create().hardness(4.5f).resistance(-1f))); // WHY is it .create() but FabricItemSettings is just a regular-ass constructor AAAAGH
+}

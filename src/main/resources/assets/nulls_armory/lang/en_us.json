@@ -1,0 +1,20 @@
+{
+  "item.nulls_armory.crucible": "Crucible",
+  "item.nulls_armory.true_knife": "True Knife",
+  "item.nulls_armory.orthos_prime": "Orthos Prime",
+
+  "item.nulls_armory.voidgel_orb": "Voidgel Orb",
+  "item.nulls_armory.voidshell_ingot": "Voidshell Ingot",
+
+  "item.nulls_armory.shield_belt": "Shield Belt",
+
+  "block.nulls_armory.void_ore": "Void Ore",
+
+  "tooltip.nulls_armory.crucible": "It is said that the Crucible is especially painful for Nether mobs...",
+
+  "attribute.nulls_armory.max_shields": "Max Shields",
+  "attribute.nulls_armory.shields_recharge_delay": "Shield Recharge Delay",
+  "attribute.nulls_armory.shields_recharge_rate": "Shield Recharge Rate",
+
+  "itemGroup.nulls_armory.void_items": "Void Items"
+}

@@ -1,32 +1,32 @@
 {
 	"schemaVersion": 1,
-	"id": "otherworldly-weapons",
+	"id": "nulls_armory",
 	"version": "${version}",
-	"name": "Otherworldly Weapons",
+	"name": "Null's Armory",
 	"description": "This is an example description! Tell everyone what your mod is about!",
 	"authors": [
-		"Me!"
+		"S. C. Arzehd"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
 	"license": "CC0-1.0",
-	"icon": "assets/otherworldly-weapons/icon.png",
+	"icon": "assets/nulls_armory/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.scarzehd.otherworldlyweapons.OtherworldlyWeapons"
+			"com.scarzehd.nullsarmory.NullsArmory"
 		],
 		"client": [
-			"com.scarzehd.otherworldlyweapons.OtherworldlyWeaponsClient"
+			"com.scarzehd.nullsarmory.NullsArmoryClient"
 		],
 		"cardinal-components": [
-			"com.scarzehd.otherworldlyweapons.components.ModComponents"
+			"com.scarzehd.nullsarmory.components.ModComponents"
 		]
 	},
 	"mixins": [
-		"otherworldly-weapons.mixins.json"
+		"nulls_armory.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.15.7",
@@ -38,7 +38,7 @@
 	},
 	"custom": {
 		"cardinal-components": [
-			"otherworldly-weapons:shields"
+			"nulls_armory:shields"
 		]
 	}
 }
