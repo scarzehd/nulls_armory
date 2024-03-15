@@ -1,6 +1,6 @@
-package com.scarzehd.otherworldldlyweapons.world;
+package com.scarzehd.otherworldlyweapons.world;
 
-import com.scarzehd.otherworldldlyweapons.OtherworldlyWeapons;
+import com.scarzehd.otherworldlyweapons.OtherworldlyWeapons;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.minecraft.registry.RegistryKey;

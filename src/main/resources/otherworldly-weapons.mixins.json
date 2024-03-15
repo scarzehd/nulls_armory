@@ -1,9 +1,10 @@
 {
 	"required": true,
-	"package": "com.scarzehd.otherworldldlyweapons.mixin",
+	"package": "com.scarzehd.otherworldlyweapons.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
-		"ExampleMixin"
+		"LivingEntityMixin",
+		"PlayerEntityMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

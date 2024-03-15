@@ -1,13 +1,12 @@
-package com.scarzehd.otherworldldlyweapons.item;
+package com.scarzehd.otherworldlyweapons.item;
 
-import com.scarzehd.otherworldldlyweapons.OtherworldlyWeapons;
-import com.scarzehd.otherworldldlyweapons.item.custom.CrucibleSwordItem;
-import com.scarzehd.otherworldldlyweapons.item.custom.OrthosPrimeSwordItem;
-import com.scarzehd.otherworldldlyweapons.item.custom.TrueKnifeSwordItem;
+import com.scarzehd.otherworldlyweapons.OtherworldlyWeapons;
+import com.scarzehd.otherworldlyweapons.item.custom.CrucibleSwordItem;
+import com.scarzehd.otherworldlyweapons.item.custom.OrthosPrimeSwordItem;
+import com.scarzehd.otherworldlyweapons.item.custom.ShieldBeltItem;
+import com.scarzehd.otherworldlyweapons.item.custom.TrueKnifeSwordItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.Item;
-import net.minecraft.item.SwordItem;
-import net.minecraft.item.ToolMaterial;
 import net.minecraft.item.ToolMaterials;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -31,4 +30,6 @@ public class ModItems {
     public static final Item VOIDGEL_ORB = registerItem("voidgel_orb", new Item(new FabricItemSettings()));
 
     public static final Item VOIDSHELL_INGOT = registerItem("voidshell_ingot", new Item(new FabricItemSettings()));
+
+    public static final Item SHIELD_BELT = registerItem("shield_belt", new ShieldBeltItem(new FabricItemSettings().maxCount(1)));
 }

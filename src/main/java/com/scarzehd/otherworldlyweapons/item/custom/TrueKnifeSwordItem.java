@@ -1,10 +1,7 @@
-package com.scarzehd.otherworldldlyweapons.item.custom;
+package com.scarzehd.otherworldlyweapons.item.custom;
 
-import com.google.common.collect.Multimap;
-import com.scarzehd.otherworldldlyweapons.OtherworldlyWeapons;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.entity.attribute.EntityAttribute;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.player.PlayerEntity;
@@ -17,9 +14,6 @@ import net.minecraft.nbt.NbtList;
 import net.minecraft.registry.Registries;
 import net.minecraft.world.World;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
 import java.util.UUID;
 
 public class TrueKnifeSwordItem extends SwordItem {

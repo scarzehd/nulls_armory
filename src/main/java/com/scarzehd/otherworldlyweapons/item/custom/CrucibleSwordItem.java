@@ -1,7 +1,7 @@
-package com.scarzehd.otherworldldlyweapons.item.custom;
+package com.scarzehd.otherworldlyweapons.item.custom;
 
-import com.scarzehd.otherworldldlyweapons.ModTags;
-import com.scarzehd.otherworldldlyweapons.OtherworldlyWeapons;
+import com.scarzehd.otherworldlyweapons.ModTags;
+import com.scarzehd.otherworldlyweapons.OtherworldlyWeapons;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageTypes;

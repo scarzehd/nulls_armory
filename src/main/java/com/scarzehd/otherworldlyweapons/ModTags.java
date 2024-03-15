@@ -1,4 +1,4 @@
-package com.scarzehd.otherworldldlyweapons;
+package com.scarzehd.otherworldlyweapons;
 
 import net.minecraft.entity.EntityType;
 import net.minecraft.registry.RegistryKeys;

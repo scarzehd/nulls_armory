@@ -1,18 +1,13 @@
-package com.scarzehd.otherworldldlyweapons.item.custom;
+package com.scarzehd.otherworldlyweapons.item.custom;
 
-import com.scarzehd.otherworldldlyweapons.OtherworldlyWeapons;
-import net.fabricmc.fabric.mixin.registry.sync.RegistriesAccessor;
+import com.scarzehd.otherworldlyweapons.OtherworldlyWeapons;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.damage.DamageSource;
-import net.minecraft.entity.damage.DamageSources;
 import net.minecraft.entity.damage.DamageTypes;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
-import net.minecraft.registry.*;
-import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.math.random.Random;
 
 import java.util.Collection;

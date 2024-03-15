@@ -1,10 +1,10 @@
-package com.scarzehd.otherworldldlyweapons;
+package com.scarzehd.otherworldlyweapons;
 
-import com.scarzehd.otherworldldlyweapons.block.ModBlocks;
-import com.scarzehd.otherworldldlyweapons.item.ModItems;
-import com.scarzehd.otherworldldlyweapons.world.ModWorldGen;
+import com.scarzehd.otherworldlyweapons.attribute.ModAttributes;
+import com.scarzehd.otherworldlyweapons.block.ModBlocks;
+import com.scarzehd.otherworldlyweapons.item.ModItems;
+import com.scarzehd.otherworldlyweapons.world.ModWorldGen;
 import net.fabricmc.api.ModInitializer;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -18,5 +18,7 @@ public class OtherworldlyWeapons implements ModInitializer {
 		ModBlocks.registerBlocks();
 		ModWorldGen.registerWorldGen();
 		ModTags.registerTags();
+		ModAttributes.registerAttributes();
+		ModItemGroups.registerItemGroups();
 	}
 }
