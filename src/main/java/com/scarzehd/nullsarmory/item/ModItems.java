@@ -30,5 +30,5 @@ public class ModItems {
 
     public static final Item SHIELD_BELT = registerItem("shield_belt", new ShieldBeltItem(new FabricItemSettings().maxCount(1)));
 
-    public static final Item KINETIC_CONVERTER = registerItem("Kinetic_converter", new KineticConverterItem(new FabricItemSettings().maxCount(1)));
+    public static final Item KINETIC_CONVERTER = registerItem("kinetic_converter", new KineticConverterItem(new FabricItemSettings().maxCount(1)));
 }
