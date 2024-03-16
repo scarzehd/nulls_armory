@@ -23,5 +23,8 @@ public class ModBlocks {
 
     public static final Block VOID_ORE = registerBlock("void_ore", new Block(FabricBlockSettings.create().hardness(4.5f).resistance(-1f))); // WHY is it .create() but FabricItemSettings is just a regular-ass constructor AAAAGH
 
-    public static final Block ELDER_ORE_BLOCK = registerBlock("elder_ore_block", new Block(FabricBlockSettings.create().hardness(5).resistance(-1)));
+    public static final Block ELDER_BLOCK = registerBlock("elder_block", new Block(FabricBlockSettings.create().hardness(5).resistance(-1)));
+
+    public static final  Block ELDRITCH_LECTERN =registerBlock("eldritch_lectern", new Block(FabricBlockSettings.create().hardness(3).resistance(-1))); // this is gonna be the main fuctional block of elder ore
+    //note to self: looks weird in hand but fine when placed, find out why from ezra
 }

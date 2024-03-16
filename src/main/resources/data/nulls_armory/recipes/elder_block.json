@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "blocks",
+  "pattern": [
+    "iii",
+    "iii",
+    "iii"
+  ],
+  "key": {
+    "i": {
+      "item": "nulls_armory:elder_ingot"
+    }
+  },
+  "result": {
+    "item": "nulls_armory:elder_block",
+    "count": 1
+  }
+}

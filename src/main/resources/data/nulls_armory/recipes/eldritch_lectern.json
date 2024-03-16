@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "blocks",
+  "pattern": [
+    "ibi",
+    "ini",
+    "ooo"
+  ],
+  "key": {
+    "i": {
+      "item": "nulls_armory:elder_ingot"
+    },
+    "n": {
+      "item": "minecraft:nether_star"
+    },
+    "o": {
+      "item": "minecraft:blackstone_slab"
+    },
+    "b": {
+      "tag": "minecraft:wool_carpets"
+    }
+  },
+  "result": {
+    "item": "nulls_armory:eldritch_lectern",
+    "count": 1
+  }
+}
