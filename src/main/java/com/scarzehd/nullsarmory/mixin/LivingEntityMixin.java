@@ -38,8 +38,6 @@ abstract class LivingEntityMixin extends Entity {
 
         double shields = shieldsComponent.getCurrentShields();
 
-        NullsArmory.LOGGER.info("Mixin");
-
         if (shields > 0) {
             double newShields = shields - amount;
             if (newShields < 0) {
