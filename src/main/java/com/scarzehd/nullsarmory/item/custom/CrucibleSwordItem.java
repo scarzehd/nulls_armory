@@ -10,6 +10,7 @@ import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.text.Text;
 import net.minecraft.world.World;
+import net.minecraft.world.dimension.DimensionTypes;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
@@ -23,8 +24,7 @@ public class CrucibleSwordItem extends SwordItem {
 
     @Override
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
-        if (target.getType().isIn(ModTags.NETHER_MOBS)) {
-            NullsArmory.LOGGER.info("Is in nether mobs");
+        if (attacker.getEntityWorld().getRegistryKey() == World.NETHER) {
             target.damage(attacker.getDamageSources().create(DamageTypes.GENERIC), getAttackDamage() * NETHER_MOB_DAMAGE_MODIFIER);
         }
 

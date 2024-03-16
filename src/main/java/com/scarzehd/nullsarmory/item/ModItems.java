@@ -1,10 +1,7 @@
 package com.scarzehd.nullsarmory.item;
 
 import com.scarzehd.nullsarmory.NullsArmory;
-import com.scarzehd.nullsarmory.item.custom.CrucibleSwordItem;
-import com.scarzehd.nullsarmory.item.custom.OrthosPrimeSwordItem;
-import com.scarzehd.nullsarmory.item.custom.ShieldBeltItem;
-import com.scarzehd.nullsarmory.item.custom.TrueKnifeSwordItem;
+import com.scarzehd.nullsarmory.item.custom.*;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.Item;
 import net.minecraft.item.ToolMaterials;
@@ -32,4 +29,6 @@ public class ModItems {
     public static final Item VOIDSHELL_INGOT = registerItem("voidshell_ingot", new Item(new FabricItemSettings()));
 
     public static final Item SHIELD_BELT = registerItem("shield_belt", new ShieldBeltItem(new FabricItemSettings().maxCount(1)));
+
+    public static final Item KINETIC_CONVERTER = registerItem("Kinetic_converter", new KineticConverterItem(new FabricItemSettings().maxCount(1)));
 }
