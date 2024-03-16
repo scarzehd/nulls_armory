@@ -1,5 +1,6 @@
 package com.scarzehd.nullsarmory;
 
+import com.scarzehd.nullsarmory.block.ModBlocks;
 import com.scarzehd.nullsarmory.item.ModItems;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
@@ -20,6 +21,13 @@ public class ModItemGroups {
                 entries.add(ModItems.ORTHOS_PRIME);
                 entries.add(ModItems.SHIELD_BELT);
                 entries.add(ModItems.TRUE_KNIFE);
+                entries.add(ModItems.ELDER_INGOT);
+                entries.add(ModItems.KINETIC_CONVERTER);
+
+
+                entries.add(ModBlocks.ELDER_BLOCK.asItem());
+                entries.add(ModBlocks.VOID_ORE.asItem());
+                entries.add(ModBlocks.ELDRITCH_LECTERN.asItem());
             }).build());
 
     public static void registerItemGroups() {
