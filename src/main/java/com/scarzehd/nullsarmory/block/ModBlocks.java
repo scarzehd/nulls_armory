@@ -22,4 +22,6 @@ public class ModBlocks {
     }
 
     public static final Block VOID_ORE = registerBlock("void_ore", new Block(FabricBlockSettings.create().hardness(4.5f).resistance(-1f))); // WHY is it .create() but FabricItemSettings is just a regular-ass constructor AAAAGH
+
+    public static final Block ELDER_ORE_BLOCK = registerBlock("elder_ore_block", new Block(FabricBlockSettings.create().hardness(5).resistance(-1)));
 }
