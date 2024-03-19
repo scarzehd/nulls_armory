@@ -3,7 +3,9 @@
 	"package": "com.scarzehd.nullsarmory.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
-		"LivingEntityMixin"
+		"LivingEntityMixin",
+		"PlayerEntityMixin",
+		"ShieldsHudMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

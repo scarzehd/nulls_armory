@@ -1,9 +1,7 @@
 package com.scarzehd.nullsarmory.mixin;
 
-import com.scarzehd.nullsarmory.NullsArmory;
 import com.scarzehd.nullsarmory.attribute.ModAttributes;
-import com.scarzehd.nullsarmory.components.IShieldsComponent;
-import com.scarzehd.nullsarmory.components.ModComponents;
+import com.scarzehd.nullsarmory.util.ShieldsUtilities;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
@@ -21,9 +19,7 @@ abstract class LivingEntityMixin extends Entity {
         super(type, world);
     }
 
-    @Inject(
-            method = "createLivingAttributes()Lnet/minecraft/entity/attribute/DefaultAttributeContainer$Builder;",
-            require = 1, allow = 1, at = @At("RETURN"))
+    @Inject(method = "createLivingAttributes()Lnet/minecraft/entity/attribute/DefaultAttributeContainer$Builder;", at = @At("RETURN"))
     private static void addAttributes(final CallbackInfoReturnable<DefaultAttributeContainer.Builder> info) {
         info.getReturnValue().add(ModAttributes.MAX_SHIELDS);
         info.getReturnValue().add(ModAttributes.SHIELDS_RECHARGE_DELAY);
@@ -33,26 +29,6 @@ abstract class LivingEntityMixin extends Entity {
     @ModifyVariable(method = "applyDamage", at = @At("HEAD"))
     private float modifyDamage(float amount) {
         LivingEntity target = (LivingEntity)(Object)this;
-
-        IShieldsComponent shieldsComponent = ModComponents.SHIELDS.get(target);
-
-        double shields = shieldsComponent.getCurrentShields();
-
-        NullsArmory.LOGGER.info("Mixin");
-
-        if (shields > 0) {
-            double newShields = shields - amount;
-            if (newShields < 0) {
-                amount -= shields;
-                newShields = 0;
-            } else {
-                amount = 0;
-            }
-
-            shieldsComponent.setCurrentShields(newShields);
-            shieldsComponent.resetRechargeDelay();
-        }
-
-        return amount;
+        return ShieldsUtilities.modifyDamage(amount, target);
     }
 }

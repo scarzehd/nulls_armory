@@ -22,7 +22,7 @@ public class KineticConverterItem extends Item {
     }
 
     @Override
-    public Multimap<EntityAttribute, EntityAttributeModifier> getAttributeModifiers(ItemStack stack, EquipmentSlot slot) {
+    public Multimap<EntityAttribute, EntityAttributeModifier> getAttributeModifiers(EquipmentSlot slot) {
         Multimap<EntityAttribute, EntityAttributeModifier> modifiers = Multimaps.newMultimap(Maps.newLinkedHashMap(), ArrayList::new);
 
         if (slot == EquipmentSlot.OFFHAND) {

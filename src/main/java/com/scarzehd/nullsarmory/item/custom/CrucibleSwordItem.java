@@ -25,7 +25,7 @@ public class CrucibleSwordItem extends SwordItem {
     @Override
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
         if (attacker.getEntityWorld().getRegistryKey() == World.NETHER) {
-            target.damage(attacker.getDamageSources().create(DamageTypes.GENERIC), getAttackDamage() * NETHER_MOB_DAMAGE_MODIFIER);
+            target.damage(attacker.getDamageSources().generic(), getAttackDamage() * NETHER_MOB_DAMAGE_MODIFIER);
         }
 
         return super.postHit(stack, target, attacker);

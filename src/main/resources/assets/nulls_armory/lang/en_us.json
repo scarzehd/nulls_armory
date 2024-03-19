@@ -5,11 +5,14 @@
 
   "item.nulls_armory.voidgel_orb": "Voidgel Orb",
   "item.nulls_armory.voidshell_ingot": "Voidshell Ingot",
+  "item.nulls_armory.elder_ingot": "Elder Ingot",
 
   "item.nulls_armory.shield_belt": "Shield Belt",
   "item.nulls_armory.kinetic_converter": "Kinetic Converter",
 
   "block.nulls_armory.void_ore": "Void Ore",
+  "block.nulls_armory.elder_block": "Elder Block",
+  "block.nulls_armory.eldritch_lectern": "Eldritch Lectern",
 
   "tooltip.nulls_armory.crucible": "It is said that the Crucible is especially painful for Nether mobs...",
 
