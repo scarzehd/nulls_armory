@@ -1,22 +1,26 @@
-package com.scarzehd.nullsarmory.client;
+package com.scarzehd.nullsarmory.mixin;
 
-import com.mojang.blaze3d.systems.RenderSystem;
 import com.scarzehd.nullsarmory.NullsArmory;
 import com.scarzehd.nullsarmory.attribute.ModAttributes;
 import com.scarzehd.nullsarmory.components.ModComponents;
-import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.DrawContext;
-import net.minecraft.client.render.GameRenderer;
+import net.minecraft.client.gui.hud.InGameHud;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.Identifier;
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-public class ShieldsHudOverlay implements HudRenderCallback {
-    public static final Identifier SHIELD_HEARTS_TEXTURE = new Identifier(NullsArmory.MOD_ID, "textures/gui/shield_hearts.png");
+@Mixin(InGameHud.class)
+public class ShieldsHudMixin {
+    private static final Identifier SHIELD_HEARTS_TEXTURE = new Identifier(NullsArmory.MOD_ID, "textures/gui/shield_hearts.png");
 
-    @Override
-    public void onHudRender(DrawContext context, float tickDelta) {
+
+    @Inject(method = "render", at = @At("HEAD"))
+    public void onHudRender(DrawContext context, float tickDelta, CallbackInfo info) {
         MinecraftClient client = MinecraftClient.getInstance();
 
         if (client.options.hudHidden) return;
@@ -42,9 +46,6 @@ public class ShieldsHudOverlay implements HudRenderCallback {
 
         double shields = Math.ceil(ModComponents.SHIELDS.get(player).getCurrentShields());
 
-        RenderSystem.disableDepthTest();
-        RenderSystem.enableBlend();
-
         for (int i = 0; i < maxShields; i++) {
             x = width / 2 - 91 + (i % 10) * 8;
             y = baseY - (int) (double) (i / 10) * 10;
@@ -62,9 +63,6 @@ public class ShieldsHudOverlay implements HudRenderCallback {
             y = baseY - (int)Math.floor(shields / 20) * 10;
             drawShieldsHeart(context, x, y, true);
         }
-
-        RenderSystem.disableBlend();
-        RenderSystem.enableDepthTest();
     }
 
     private void drawShieldsContainer(DrawContext context, int x, int y) {
