@@ -39,10 +39,14 @@ public class ShieldsComponent implements IShieldsComponent {
             if (rechargeTimer > 0) {
                 rechargeTimer--;
             } else {
-                shields = Math.min(shields + 1, maxShields);
+                setCurrentShields(shields + 1);
                 rechargeTimer = (int)Math.round(20 / provider.getAttributeValue(ModAttributes.SHIELDS_RECHARGE_RATE));
                 NullsArmory.LOGGER.info("Shields: " + shields + ", Timer: " + rechargeTimer);
             }
+        }
+
+        if (shields > maxShields) {
+            setCurrentShields(maxShields);
         }
     }
 
@@ -53,7 +57,7 @@ public class ShieldsComponent implements IShieldsComponent {
 
     @Override
     public void setCurrentShields(double shields) {
-        this.shields = shields;
+        this.shields = Math.min(shields, provider.getAttributeValue(ModAttributes.MAX_SHIELDS));
         ModComponents.SHIELDS.sync(provider);
     }
 
