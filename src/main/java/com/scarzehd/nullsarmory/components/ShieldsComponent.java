@@ -76,4 +76,9 @@ public class ShieldsComponent implements IShieldsComponent {
     public void resetRechargeDelay() {
         setCurrentRechargeDelay((int)Math.round(provider.getAttributeValue(ModAttributes.SHIELDS_RECHARGE_DELAY)));
     }
+
+    @Override
+    public boolean isCharging() {
+        return rechargeDelay <= 0;
+    }
 }
