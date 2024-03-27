@@ -14,4 +14,6 @@ public interface IShieldsComponent extends Component, AutoSyncedComponent, Serve
     void setCurrentRechargeDelay(int delay);
 
     void resetRechargeDelay();
+
+    boolean isCharging();
 }
