@@ -11,7 +11,7 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 public class ModItemGroups {
-    public static final ItemGroup VOID_ITEMS = Registry.register(Registries.ITEM_GROUP, new Identifier(NullsArmory.MOD_ID, "void_items"), FabricItemGroup.builder()
+    public static final ItemGroup VOID_ITEMS = Registry.register(Registries.ITEM_GROUP, Identifier.of(NullsArmory.MOD_ID, "void_items"), FabricItemGroup.builder()
             .icon(() -> new ItemStack(ModItems.VOIDSHELL_INGOT))
             .displayName(Text.translatable("itemGroup.nulls_armory.void_items"))
             .entries((context, entries) -> {

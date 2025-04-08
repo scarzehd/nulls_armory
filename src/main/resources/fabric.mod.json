@@ -31,11 +31,11 @@
 	],
 	"depends": {
 		"fabricloader": ">=0.15.7",
-		"minecraft": "~1.20.1",
-		"java": ">=17",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
 		"fabric-api": "*",
 		"bettercombat": "*",
-		"trinkets": ">=3.7.2"
+		"trinkets": ">=3.10.0"
 	},
 	"custom": {
 		"cardinal-components": [
