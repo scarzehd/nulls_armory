@@ -21,17 +21,14 @@ public class ShieldsUtilities {
             }
 
             double newShields = shields - amount;
-            if (newShields < 0) {
-                amount -= shields;
-                newShields = 0;
-            } else {
-                amount = 0;
-            }
 
             shieldsComponent.setCurrentShields(newShields);
-        }
 
-        shieldsComponent.resetRechargeDelay();
+            shieldsComponent.resetRechargeDelay();
+            return 0;
+        } else {
+            shieldsComponent.resetRechargeDelay();
+        }
 
         return amount;
     }
