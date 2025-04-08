@@ -67,10 +67,10 @@ public class ShieldsHudMixin {
     }
 
     private void drawShieldsContainer(DrawContext context, int x, int y) {
-        context.drawTexture(SHIELD_HEARTS_TEXTURE, x, y, 18, 0, 9, 9, 27, 9);
+        context.drawTexture(SHIELD_HEARTS_TEXTURE, x, y, 20, 0, 9, 9, 29, 9);
     }
 
     private void drawShieldsHeart(DrawContext context, int x, int y, boolean half) {
-        context.drawTexture(SHIELD_HEARTS_TEXTURE, x, y, half ? 9 : 0, 0, 9, 9, 27, 9);
+        context.drawTexture(SHIELD_HEARTS_TEXTURE, x, y, half ? 10 : 0, 0, 9, 9, 29, 9);
     }
 }
