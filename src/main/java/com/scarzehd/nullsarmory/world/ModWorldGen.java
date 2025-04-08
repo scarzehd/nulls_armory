@@ -15,5 +15,5 @@ public class ModWorldGen {
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, VOID_ORE_PLACED_KEY);
     }
 
-    public static final RegistryKey<PlacedFeature> VOID_ORE_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(NullsArmory.MOD_ID, "void_ore"));
+    public static final RegistryKey<PlacedFeature> VOID_ORE_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of(NullsArmory.MOD_ID, "void_ore"));
 }

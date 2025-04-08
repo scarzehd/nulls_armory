@@ -4,6 +4,7 @@ import com.scarzehd.nullsarmory.NullsArmory;
 import com.scarzehd.nullsarmory.attribute.ModAttributes;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.nbt.NbtCompound;
+import net.minecraft.registry.RegistryWrapper;
 
 public class ShieldsComponent implements IShieldsComponent {
     private double shields = 0;
@@ -18,13 +19,13 @@ public class ShieldsComponent implements IShieldsComponent {
     }
 
     @Override
-    public void readFromNbt(NbtCompound tag) {
+    public void readFromNbt(NbtCompound tag, RegistryWrapper.WrapperLookup wrapperLookup) {
         shields = tag.getDouble("Shields");
         rechargeDelay = tag.getInt("RechargeDelay");
     }
 
     @Override
-    public void writeToNbt(NbtCompound tag) {
+    public void writeToNbt(NbtCompound tag, RegistryWrapper.WrapperLookup wrapperLookup) {
         tag.putDouble("Shields", shields);
         tag.putInt("RechargeDelay", rechargeDelay);
     }

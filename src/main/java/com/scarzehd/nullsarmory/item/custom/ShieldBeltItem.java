@@ -1,26 +1,30 @@
 package com.scarzehd.nullsarmory.item.custom;
 
 import com.google.common.collect.Multimap;
+import com.scarzehd.nullsarmory.NullsArmory;
 import com.scarzehd.nullsarmory.attribute.ModAttributes;
 import dev.emi.trinkets.api.SlotReference;
 import dev.emi.trinkets.api.TrinketItem;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.EntityAttribute;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.registry.entry.RegistryEntry;
+import net.minecraft.util.Identifier;
 
 import java.util.UUID;
 
 public class ShieldBeltItem extends TrinketItem {
-    public ShieldBeltItem(Settings settings) {
+    public ShieldBeltItem(Item.Settings settings) {
         super(settings);
     }
 
     @Override
-    public Multimap<EntityAttribute, EntityAttributeModifier> getModifiers(ItemStack stack, SlotReference slot, LivingEntity entity, UUID uuid) {
-        Multimap<EntityAttribute, EntityAttributeModifier> modifiers = super.getModifiers(stack, slot, entity, uuid);
+    public Multimap<RegistryEntry<EntityAttribute>, EntityAttributeModifier> getModifiers(ItemStack stack, SlotReference slot, LivingEntity entity, Identifier slotIdentifier) {
+        Multimap<RegistryEntry<EntityAttribute>, EntityAttributeModifier> modifiers = super.getModifiers(stack, slot, entity, slotIdentifier);
 
-        modifiers.put(ModAttributes.MAX_SHIELDS, new EntityAttributeModifier(uuid, "nulls_armory:max_shields", 4, EntityAttributeModifier.Operation.ADDITION));
+        modifiers.put(ModAttributes.MAX_SHIELDS, new EntityAttributeModifier(Identifier.of(NullsArmory.MOD_ID, "max_shields"), 4, EntityAttributeModifier.Operation.ADD_VALUE));
 
         return modifiers;
     }

@@ -10,5 +10,5 @@ public class ModTags {
         NullsArmory.LOGGER.info("Registering Mod Tags");
     }
 
-    public static final TagKey<EntityType<?>> NETHER_MOBS = TagKey.of(RegistryKeys.ENTITY_TYPE, new Identifier(NullsArmory.MOD_ID, "nether_mobs"));
+    public static final TagKey<EntityType<?>> NETHER_MOBS = TagKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(NullsArmory.MOD_ID, "nether_mobs"));
 }

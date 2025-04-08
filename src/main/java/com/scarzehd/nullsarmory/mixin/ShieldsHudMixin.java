@@ -6,6 +6,7 @@ import com.scarzehd.nullsarmory.components.ModComponents;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.hud.InGameHud;
+import net.minecraft.client.render.RenderTickCounter;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.Identifier;
@@ -16,11 +17,11 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(InGameHud.class)
 public class ShieldsHudMixin {
-    private static final Identifier SHIELD_HEARTS_TEXTURE = new Identifier(NullsArmory.MOD_ID, "textures/gui/shield_hearts.png");
+    private static final Identifier SHIELD_HEARTS_TEXTURE = Identifier.of(NullsArmory.MOD_ID, "textures/gui/shield_hearts.png");
 
 
     @Inject(method = "render", at = @At("HEAD"))
-    public void onHudRender(DrawContext context, float tickDelta, CallbackInfo info) {
+    public void onHudRender(DrawContext context, RenderTickCounter tickCounter, CallbackInfo info) {
         MinecraftClient client = MinecraftClient.getInstance();
 
         if (client.options.hudHidden) return;
@@ -66,10 +67,10 @@ public class ShieldsHudMixin {
     }
 
     private void drawShieldsContainer(DrawContext context, int x, int y) {
-        context.drawTexture(SHIELD_HEARTS_TEXTURE, x, y, 18, 0, 9, 9, 27, 9);
+        context.drawTexture(SHIELD_HEARTS_TEXTURE, x, y, 20, 0, 9, 9, 29, 9);
     }
 
     private void drawShieldsHeart(DrawContext context, int x, int y, boolean half) {
-        context.drawTexture(SHIELD_HEARTS_TEXTURE, x, y, half ? 9 : 0, 0, 9, 9, 27, 9);
+        context.drawTexture(SHIELD_HEARTS_TEXTURE, x, y, half ? 10 : 0, 0, 9, 9, 29, 9);
     }
 }
