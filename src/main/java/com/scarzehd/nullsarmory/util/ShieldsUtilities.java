@@ -1,5 +1,6 @@
 package com.scarzehd.nullsarmory.util;
 
+import com.scarzehd.nullsarmory.ModTags;
 import com.scarzehd.nullsarmory.NullsArmory;
 import com.scarzehd.nullsarmory.attribute.ModAttributes;
 import com.scarzehd.nullsarmory.components.IShieldsComponent;
@@ -9,11 +10,15 @@ import net.minecraft.component.type.AttributeModifierSlot;
 import net.minecraft.component.type.AttributeModifiersComponent;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
+import net.minecraft.entity.damage.DamageSource;
+import net.minecraft.registry.tag.DamageTypeTags;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Identifier;
 
 public class ShieldsUtilities {
-    public static float modifyDamage(float amount, LivingEntity entity) {
+    public static float modifyDamage(float amount, LivingEntity entity, DamageSource source) {
+        if (source.isIn(ModTags.BYPASSES_SHIELDS))
+            return amount;
 
         IShieldsComponent shieldsComponent = ModComponents.SHIELDS.get(entity);
 
@@ -27,6 +32,10 @@ public class ShieldsUtilities {
             }
 
             double newShields = shields - amount;
+
+            double maxUnderflow = entity.getAttributeValue(ModAttributes.SHIELDS_UNDERFLOW);
+
+            if (newShields < maxUnderflow) newShields = maxUnderflow;
 
             shieldsComponent.setCurrentShields(newShields);
 

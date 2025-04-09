@@ -6,6 +6,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
+import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -24,11 +25,12 @@ abstract class LivingEntityMixin extends Entity {
         info.getReturnValue().add(ModAttributes.MAX_SHIELDS);
         info.getReturnValue().add(ModAttributes.SHIELDS_RECHARGE_DELAY);
         info.getReturnValue().add(ModAttributes.SHIELDS_RECHARGE_RATE);
+        info.getReturnValue().add(ModAttributes.SHIELDS_UNDERFLOW);
     }
 
     @ModifyVariable(method = "applyDamage", at = @At("HEAD"))
-    private float modifyDamage(float amount) {
+    private float modifyDamage(float amount, DamageSource source) {
         LivingEntity target = (LivingEntity)(Object)this;
-        return ShieldsUtilities.modifyDamage(amount, target);
+        return ShieldsUtilities.modifyDamage(amount, target, source);
     }
 }
