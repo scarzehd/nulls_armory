@@ -24,6 +24,10 @@ public class ModItemGroups {
                 entries.add(ModItems.ELDER_INGOT);
                 entries.add(ModItems.KINETIC_CONVERTER);
 
+                entries.add(ModItems.RISING_STAR_HELMET);
+                entries.add(ModItems.RISING_STAR_CHESTPLATE);
+                entries.add(ModItems.RISING_STAR_LEGGINGS);
+                entries.add(ModItems.RISING_STAR_BOOTS);
 
                 entries.add(ModBlocks.ELDER_BLOCK.asItem());
                 entries.add(ModBlocks.VOID_ORE.asItem());

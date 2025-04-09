@@ -29,8 +29,8 @@ public class TrueKnifeSwordItem extends SwordItem {
                         .build()));
     }
 
-    private static final double curveScaleX = 0.2;
-    private static final double curveScaleY = 5.5;
+    private static final double curveScaleX = 0.4;
+    private static final double curveScaleY = 7;
 
     public static final Identifier modifierId = Identifier.of(NullsArmory.MOD_ID, "monster_killer");
 

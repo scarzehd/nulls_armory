@@ -1,10 +1,16 @@
 package com.scarzehd.nullsarmory.util;
 
+import com.scarzehd.nullsarmory.NullsArmory;
+import com.scarzehd.nullsarmory.attribute.ModAttributes;
 import com.scarzehd.nullsarmory.components.IShieldsComponent;
 import com.scarzehd.nullsarmory.components.ModComponents;
 import com.scarzehd.nullsarmory.event.ShieldsDamageCallback;
+import net.minecraft.component.type.AttributeModifierSlot;
+import net.minecraft.component.type.AttributeModifiersComponent;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.util.ActionResult;
+import net.minecraft.util.Identifier;
 
 public class ShieldsUtilities {
     public static float modifyDamage(float amount, LivingEntity entity) {
@@ -31,5 +37,13 @@ public class ShieldsUtilities {
         }
 
         return amount;
+    }
+
+    public static AttributeModifiersComponent createShieldAttributeModifierComponent(int shields, int rechargeDelay, int rechargeRate, String id, AttributeModifierSlot slot) {
+        return AttributeModifiersComponent.builder()
+                .add(ModAttributes.MAX_SHIELDS, new EntityAttributeModifier(Identifier.of(NullsArmory.MOD_ID, id + "_max-shields_" + slot.asString()), shields, EntityAttributeModifier.Operation.ADD_VALUE), slot)
+                .add(ModAttributes.SHIELDS_RECHARGE_DELAY, new EntityAttributeModifier(Identifier.of(NullsArmory.MOD_ID, id + "_shields-delay_" + slot.asString()), rechargeDelay, EntityAttributeModifier.Operation.ADD_VALUE), slot)
+                .add(ModAttributes.SHIELDS_RECHARGE_RATE, new EntityAttributeModifier(Identifier.of(NullsArmory.MOD_ID, id + "_shields-rate_" + slot.asString()), rechargeRate, EntityAttributeModifier.Operation.ADD_VALUE), slot)
+                .build();
     }
 }
