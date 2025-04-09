@@ -1,22 +1,22 @@
 {
     "name": "orthos_idle",
     "author": "Spubbily01",
-    "description": "Orthos Prime pose",
+    "description": "Orthos Prime Idle",
     "emote":{
         "isLoop": "true",
         "returnTick": 1,
-        "beginTick":1,
-        "endTick":2,
+        "beginTick":0,
+        "endTick":1,
         "stopTick":11,
         "degrees":false,
         "moves":[
-            
+
             {
                 "tick":1,
                 "easing": "EASEINOUTQUAD",
                 "turn": 0,
                 "rightArm":{
-                    "yaw":0.535413384437561
+                    "yaw":0.5100437998771667
                 }
             },
             {
@@ -24,7 +24,7 @@
                 "easing": "EASEINOUTQUAD",
                 "turn": 0,
                 "rightArm":{
-                    "roll":0.20311231911182404
+                    "roll":0.3249899446964264
                 }
             },
             {
@@ -56,7 +56,7 @@
                 "easing": "EASEINOUTQUAD",
                 "turn": 0,
                 "rightArm":{
-                    "pitch":0.28048568964004517
+                    "pitch":0.38325926661491394
                 }
             },
             {
@@ -64,7 +64,7 @@
                 "easing": "EASEINOUTQUAD",
                 "turn": 0,
                 "rightItem":{
-                    "x":0.5304591059684753
+                    "x":0.1952499896287918
                 }
             },
             {
@@ -72,7 +72,7 @@
                 "easing": "EASEINOUTQUAD",
                 "turn": 0,
                 "rightItem":{
-                    "z":5.1228203773498535
+                    "z":-1.1940281391143799
                 }
             },
             {
@@ -80,7 +80,7 @@
                 "easing": "EASEINOUTQUAD",
                 "turn": 0,
                 "rightItem":{
-                    "y":-11.004334449768066
+                    "y":-2.2758843898773193
                 }
             },
             {
@@ -88,7 +88,7 @@
                 "easing": "EASEINOUTQUAD",
                 "turn": 0,
                 "rightItem":{
-                    "pitch":-0.3265160918235779
+                    "pitch":-0.37299633026123047
                 }
             },
             {
@@ -96,7 +96,7 @@
                 "easing": "EASEINOUTQUAD",
                 "turn": 0,
                 "rightItem":{
-                    "yaw":0.17072710394859314
+                    "yaw":-0.040558088570833206
                 }
             },
             {
@@ -104,7 +104,7 @@
                 "easing": "EASEINOUTQUAD",
                 "turn": 0,
                 "rightItem":{
-                    "roll":-0.025162624195218086
+                    "roll":0.03651135787367821
                 }
             }
         ]
