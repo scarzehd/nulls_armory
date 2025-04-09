@@ -35,7 +35,8 @@
 		"java": ">=21",
 		"fabric-api": "*",
 		"bettercombat": "*",
-		"trinkets": ">=3.10.0"
+		"trinkets": ">=3.10.0",
+		"geckolib": "*"
 	},
 	"custom": {
 		"cardinal-components": [
