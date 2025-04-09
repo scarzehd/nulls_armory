@@ -43,7 +43,7 @@ public class ShieldsHudMixin {
             baseY -= 10;
         }
 
-        int maxShields = (int)Math.ceil(player.getAttributeValue(ModAttributes.MAX_SHIELDS)) / 2;
+        int maxShields = (int)Math.ceil(player.getAttributeValue(ModAttributes.MAX_SHIELDS) / 2);
 
         double shields = Math.ceil(ModComponents.SHIELDS.get(player).getCurrentShields());
 

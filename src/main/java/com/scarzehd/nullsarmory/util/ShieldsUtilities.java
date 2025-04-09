@@ -6,6 +6,8 @@ import com.scarzehd.nullsarmory.attribute.ModAttributes;
 import com.scarzehd.nullsarmory.components.IShieldsComponent;
 import com.scarzehd.nullsarmory.components.ModComponents;
 import com.scarzehd.nullsarmory.event.ShieldsDamageCallback;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.minecraft.component.type.AttributeModifierSlot;
 import net.minecraft.component.type.AttributeModifiersComponent;
 import net.minecraft.entity.LivingEntity;

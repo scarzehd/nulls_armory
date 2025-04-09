@@ -1,0 +1,14 @@
+{
+  "shields_break": {
+    "subtitle": "sound.nulls_armory.shields_break",
+    "sounds": ["nulls_armory:shields_break"]
+  },
+  "shields_recharge": {
+    "subtitle": "sound.nulls_armory.shields_recharge",
+    "sounds": ["nulls_armory:shields_recharge"]
+  },
+  "shields_recharge_complete": {
+    "subtitle": "sound.nulls_armory.shields_recharge_complete",
+    "sounds": ["nulls_armory:shields_recharge_complete"]
+  }
+}

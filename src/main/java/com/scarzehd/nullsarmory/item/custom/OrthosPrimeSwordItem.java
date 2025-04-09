@@ -62,8 +62,6 @@ public class OrthosPrimeSwordItem extends SwordItem {
                 living.addStatusEffect(new StatusEffectInstance(StatusEffects.WITHER, 100, 1));
             }
 
-            NullsArmory.LOGGER.info("Attack Damage: " + baseAttackDamage + ", Extra Damage: " + baseAttackDamage * (damageMultiplier)); // Add 1 to the damage multiplier because it will only recognize the higher between the original hit's damage and the extra damage
-
             return baseAttackDamage * damageMultiplier;
         }
 
