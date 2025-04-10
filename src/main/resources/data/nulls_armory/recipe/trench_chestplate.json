@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "n n",
+    "vtv",
+    "ava"
+  ],
+  "key": {
+    "v": {
+      "item": "nulls_armory:voidshell_ingot"
+    },
+    "t": {
+      "item": "minecraft:turtle_scute"
+    },
+    "a": {
+      "item": "minecraft:armadillo_scute"
+    },
+    "n": {
+      "item": "minecraft:nether_brick"
+    }
+  },
+  "result": {
+    "id": "nulls_armory:trench_chestplate",
+    "count": 1
+  }
+}

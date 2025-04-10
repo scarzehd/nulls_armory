@@ -20,20 +20,28 @@
   "item.nulls_armory.scout_chestplate": "SC-Scout Chestplate",
   "item.nulls_armory.scout_helmet": "SC-Scout Helmet",
 
-  "item.nulls_armory.trench_boots": "Trench Crusader Boots",
-  "item.nulls_armory.trench_leggings": "Trench Crusader Leggings",
-  "item.nulls_armory.trench_chestplate": "Trench Crusader Chestplate",
-  "item.nulls_armory.trench_helmet": "Trench Crusader Helmet",
+  "item.nulls_armory.trench_boots": "Trench Resonator Boots",
+  "item.nulls_armory.trench_leggings": "Trench Resonator Leggings",
+  "item.nulls_armory.trench_chestplate": "Trench Resonator Chestplate",
+  "item.nulls_armory.trench_helmet": "Trench Resonator Helmet",
+
+  "item.nulls_armory.scout_salvage_boots": "SC-Scout Salvage Boots",
+  "item.nulls_armory.scout_salvage_leggings": "SC-Scout Salvage Leggings",
+  "item.nulls_armory.scout_salvage_chestplate": "SC-Scout Salvage Chestplate",
+  "item.nulls_armory.scout_salvage_helmet": "SC-Scout Salvage Helmet",
 
   "block.nulls_armory.void_ore": "Void Ore",
   "block.nulls_armory.elder_block": "Elder Block",
   "block.nulls_armory.eldritch_lectern": "Eldritch Lectern",
 
   "tooltip.nulls_armory.crucible": "It is said that the Crucible is especially painful in the Nether...",
+  "tooltip.nulls_armory.true_knife": "Damage increases with LV.",
+  "tooltip.nulls_armory.true_knife_2": "\"Add a little Violence\"",
 
   "attribute.nulls_armory.max_shields": "Max Shields",
   "attribute.nulls_armory.shields_recharge_delay": "Shield Recharge Delay",
   "attribute.nulls_armory.shields_recharge_rate": "Shield Recharge Time",
+  "attribute.nulls_armory.shields_underflow": "Shield Underflow",
 
   "itemGroup.nulls_armory.void_items": "Void Items"
 }

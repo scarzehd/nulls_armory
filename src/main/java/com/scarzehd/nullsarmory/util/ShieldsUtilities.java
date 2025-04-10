@@ -50,11 +50,12 @@ public class ShieldsUtilities {
         return amount;
     }
 
-    public static AttributeModifiersComponent createShieldAttributeModifierComponent(int shields, int rechargeDelay, int rechargeRate, String id, AttributeModifierSlot slot) {
+    public static AttributeModifiersComponent createShieldAttributeModifierComponent(int shields, int rechargeDelay, int rechargeRate, int underflow, String id, AttributeModifierSlot slot) {
         return AttributeModifiersComponent.builder()
                 .add(ModAttributes.MAX_SHIELDS, new EntityAttributeModifier(Identifier.of(NullsArmory.MOD_ID, id + "_max-shields_" + slot.asString()), shields, EntityAttributeModifier.Operation.ADD_VALUE), slot)
                 .add(ModAttributes.SHIELDS_RECHARGE_DELAY, new EntityAttributeModifier(Identifier.of(NullsArmory.MOD_ID, id + "_shields-delay_" + slot.asString()), rechargeDelay, EntityAttributeModifier.Operation.ADD_VALUE), slot)
                 .add(ModAttributes.SHIELDS_RECHARGE_RATE, new EntityAttributeModifier(Identifier.of(NullsArmory.MOD_ID, id + "_shields-rate_" + slot.asString()), rechargeRate, EntityAttributeModifier.Operation.ADD_VALUE), slot)
+                .add(ModAttributes.SHIELDS_UNDERFLOW, new EntityAttributeModifier(Identifier.of(NullsArmory.MOD_ID, id + "_shields-underflow_" + slot.asString()), underflow, EntityAttributeModifier.Operation.ADD_VALUE), slot)
                 .build();
     }
 }

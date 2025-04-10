@@ -28,7 +28,7 @@ public class ModArmorMaterials {
         return RegistryEntry.of(material);
     }
 
-    public static final RegistryEntry<ArmorMaterial> STARMAN = registerMaterial("rising_star",
+    public static final RegistryEntry<ArmorMaterial> STARMAN = registerMaterial("starman",
             Map.of(
                     ArmorItem.Type.HELMET, 0,
                     ArmorItem.Type.CHESTPLATE, 0,
@@ -37,9 +37,40 @@ public class ModArmorMaterials {
             ),
             5,
             SoundEvents.ITEM_ARMOR_EQUIP_GENERIC,
-            () -> Ingredient.ofItems(ModItems.VOIDGEL_ORB),
+            () -> Ingredient.ofItems(ModItems.VOIDSHELL_INGOT),
             0.0f,
             0.0f,
             false
+    );
+
+    public static final RegistryEntry<ArmorMaterial> TRENCH = registerMaterial("trench",
+            Map.of(
+                    ArmorItem.Type.HELMET, 0,
+                    ArmorItem.Type.CHESTPLATE, 0,
+                    ArmorItem.Type.LEGGINGS, 0,
+                    ArmorItem.Type.BOOTS, 0
+            ),
+            5,
+            SoundEvents.ITEM_ARMOR_EQUIP_GENERIC,
+            () -> Ingredient.ofItems(ModItems.VOIDSHELL_INGOT),
+            0.0f,
+            0.1f,
+            false
+
+    );
+    public static final RegistryEntry<ArmorMaterial> SCOUT = registerMaterial("scout",
+            Map.of(
+                    ArmorItem.Type.HELMET, 0,
+                    ArmorItem.Type.CHESTPLATE, 0,
+                    ArmorItem.Type.LEGGINGS, 0,
+                    ArmorItem.Type.BOOTS, 0
+            ),
+            5,
+            SoundEvents.ITEM_ARMOR_EQUIP_GENERIC,
+            () -> Ingredient.ofItems(ModItems.VOIDSHELL_INGOT),
+            0.0f,
+            0.0f,
+            false
+
     );
 }

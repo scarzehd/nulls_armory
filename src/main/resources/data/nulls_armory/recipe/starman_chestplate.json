@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "e e",
+    "vsv",
+    "cvc"
+  ],
+  "key": {
+    "v": {
+      "item": "nulls_armory:voidshell_ingot"
+    },
+    "c": {
+      "item": "minecraft:popped_chorus_fruit"
+    },
+    "s": {
+      "item": "minecraft:shulker_shell"
+    },
+    "e": {
+      "item": "minecraft:end_stone"
+    }
+  },
+  "result": {
+    "id": "nulls_armory:starman_chestplate",
+    "count": 1
+  }
+}

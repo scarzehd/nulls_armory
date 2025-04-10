@@ -12,13 +12,17 @@ import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
+import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.nbt.NbtElement;
 import net.minecraft.nbt.NbtList;
 import net.minecraft.registry.Registries;
+import net.minecraft.text.Style;
+import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.World;
 
+import java.util.List;
 import java.util.UUID;
 
 public class TrueKnifeSwordItem extends SwordItem {
@@ -51,5 +55,14 @@ public class TrueKnifeSwordItem extends SwordItem {
         }
 
         super.inventoryTick(stack, world, entity, slot, selected);
+    }
+
+    @Override
+    public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
+        tooltip.add(Text.translatable("tooltip.nulls_armory.true_knife"));
+        tooltip.add(Text.of(""));
+        tooltip.add(Text.translatable("tooltip.nulls_armory.true_knife_2"));
+
+        super.appendTooltip(stack, context, tooltip, type);
     }
 }
