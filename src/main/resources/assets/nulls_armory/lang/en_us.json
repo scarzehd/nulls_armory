@@ -43,5 +43,17 @@
   "attribute.nulls_armory.shields_recharge_rate": "Shield Recharge Time",
   "attribute.nulls_armory.shields_underflow": "Shield Underflow",
 
-  "itemGroup.nulls_armory.void_items": "Void Items"
+  "itemGroup.nulls_armory.void_items": "Void Items",
+
+  "advancements.nulls_armory.mr_universe.title": "Mr. Universe",
+  "advancements.nulls_armory.mr_universe.description": "Equip the full Starman set",
+
+  "advancements.nulls_armory.trench_resonator.title": "Poisoned to my Armored Core",
+  "advancements.nulls_armory.trench_resonator.description": "Equip the full Trench Resonator set",
+
+  "advancements.nulls_armory.blades_for_days.title": "Blades For Days",
+  "advancements.nulls_armory.blades_for_days.description": "Hold every Null's Armory weapon at once",
+
+  "advancements.nulls_armory.sc_scout.title": "Like a Shield Break in Slow Motion",
+  "advancements.nulls_armory.sc_scout.description": "Equip the full SC-Scout set"
 }

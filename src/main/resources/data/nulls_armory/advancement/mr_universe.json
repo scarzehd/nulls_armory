@@ -1,0 +1,44 @@
+{
+  "criteria": {
+    "starman_armor": {
+      "conditions": {
+        "items": [
+          {
+            "items": "nulls_armory:starman_helmet"
+          },
+          {
+            "items": "nulls_armory:starman_chestplate"
+          },
+          {
+            "items": "nulls_armory:starman_leggings"
+          },
+          {
+            "items": "nulls_armory:starman_boots"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.nulls_armory.mr_universe.description",
+      "fallback": "Waiting in the stars"
+    },
+    "frame": "challenge",
+    "icon": {
+      "count": 1,
+      "id": "nulls_armory:starman_chestplate"
+    },
+    "title": {
+      "translate": "advancements.nulls_armory.mr_universe.title",
+      "fallback": "Mr. Universe"
+    }
+  },
+  "requirements": [
+    [
+      "starman_armor"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,41 @@
+{
+  "criteria": {
+    "blades_for_days": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "nulls_armory:true_knife"
+          },
+          {
+            "items": "nulls_armory:orthos_prime"
+          },
+          {
+            "items": "nulls_armory:crucible"
+          }
+        ]
+      }
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.nulls_armory.blades_for_days.description",
+      "fallback": "Hold every Null's Armory weapon at once"
+    },
+    "frame": "challenge",
+    "icon": {
+      "count": 1,
+      "id": "nulls_armory:voidgel_orb"
+    },
+    "title": {
+      "translate": "advancements.nulls_armory.blades_for_days.title",
+      "fallback": "Blades For Days"
+    }
+  },
+  "requirements": [
+    [
+      "blades_for_days"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
