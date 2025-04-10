@@ -58,5 +58,8 @@
   "advancements.nulls_armory.sc_scout.description": "Obtain the full SC-Scout set",
 
   "advancements.nulls_armory.root.title": "Null Is Coming",
-  "advancements.nulls_armory.root.description": "Null is coming. You'll need gear to stop him"
+  "advancements.nulls_armory.root.description": "Null is coming. You'll need gear to stop him",
+
+  "advancement.nulls_armory.add_violence.title": "Add a Little Violence",
+  "advancement.nulls_armory.add_violence.description": "Increase your Level of Violence to power up your True Knife"
 }

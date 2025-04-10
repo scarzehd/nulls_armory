@@ -60,8 +60,6 @@ public class TrueKnifeSwordItem extends SwordItem {
     @Override
     public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
         tooltip.add(Text.translatable("tooltip.nulls_armory.true_knife"));
-        tooltip.add(Text.of(""));
-        tooltip.add(Text.translatable("tooltip.nulls_armory.true_knife_2"));
 
         super.appendTooltip(stack, context, tooltip, type);
     }
