@@ -121,7 +121,7 @@ public class ShieldsComponent implements IShieldsComponent {
             soundManager.stopSounds(ModSounds.SHIELDS_RECHARGE.getId(), SoundCategory.PLAYERS);
         } else if (shields > oldShields && !soundManager.isPlaying(rechargeSound)) {
             soundManager.play(rechargeSound);
-        } else if (shields <= 0) {
+        } else if (shields <= 0 && shields < oldShields) {
             soundManager.play(new PositionedSoundInstance(ModSounds.SHIELDS_BREAK, SoundCategory.PLAYERS, 1f, 1f, Random.create(), new BlockPos(0, 0, 0)) {{
                 this.relative = true;
             }});
