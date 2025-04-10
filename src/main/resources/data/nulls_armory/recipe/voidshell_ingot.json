@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "nulls_armory:voidgel_orb"
+    },
+    {
+      "item": "nulls_armory:voidgel_orb"
+    },
+    {
+      "item": "nulls_armory:voidgel_orb"
+    },
+    {
+      "item": "nulls_armory:voidgel_orb"
+    },
+    {
+      "item": "minecraft:copper_ingot"
+    }
+  ],
+  "result": {
+    "id": "nulls_armory:voidshell_ingot",
+    "count": 1
+  }
+}

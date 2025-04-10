@@ -1,0 +1,45 @@
+{
+  "parent": "nulls_armory:null_is_coming",
+  "criteria": {
+    "trench_armor": {
+      "conditions": {
+        "items": [
+          {
+            "items": "nulls_armory:trench_helmet"
+          },
+          {
+            "items": "nulls_armory:trench_chestplate"
+          },
+          {
+            "items": "nulls_armory:trench_leggings"
+          },
+          {
+            "items": "nulls_armory:trench_boots"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.nulls_armory.trench_resonator.description",
+      "fallback": "Equip the full Trench Resonator set"
+    },
+    "frame": "challenge",
+    "icon": {
+      "count": 1,
+      "id": "nulls_armory:trench_chestplate"
+    },
+    "title": {
+      "translate": "advancements.nulls_armory.trench_resonator.title",
+      "fallback": "Poisoned to my Armored Core"
+    }
+  },
+  "requirements": [
+    [
+      "trench_armor"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,45 @@
+{
+  "parent": "nulls_armory:null_is_coming",
+  "criteria": {
+    "scout_armor": {
+      "conditions": {
+        "items": [
+          {
+            "items": "nulls_armory:scout_helmet"
+          },
+          {
+            "items": "nulls_armory:scout_chestplate"
+          },
+          {
+            "items": "nulls_armory:scout_leggings"
+          },
+          {
+            "items": "nulls_armory:scout_boots"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.nulls_armory.sc_scout.description",
+      "fallback": "Equip the full SC-Scout set"
+    },
+    "frame": "challenge",
+    "icon": {
+      "count": 1,
+      "id": "nulls_armory:scout_chestplate"
+    },
+    "title": {
+      "translate": "advancements.nulls_armory.sc_scout.title",
+      "fallback": "Like a Shield Break in Slow Motion"
+    }
+  },
+  "requirements": [
+    [
+      "scout_armor"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

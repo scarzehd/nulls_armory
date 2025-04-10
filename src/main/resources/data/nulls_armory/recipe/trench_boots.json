@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "v v",
+    "n n"
+  ],
+  "key": {
+    "v": {
+      "item": "nulls_armory:voidshell_ingot"
+    },
+    "n": {
+      "item": "minecraft:nether_brick"
+    }
+  },
+  "result": {
+    "id": "nulls_armory:trench_boots",
+    "count": 1
+  }
+}

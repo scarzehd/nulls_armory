@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "nulls_armory:voidgel_orb"
+    },
+    {
+      "item": "nulls_armory:voidgel_orb"
+    },
+    {
+      "item": "nulls_armory:voidgel_orb"
+    },
+    {
+      "item": "nulls_armory:voidgel_orb"
+    },
+    {
+      "item": "minecraft:copper_ingot"
+    }
+  ],
+  "pattern": [
+    "pgp",
+    "pgp",
+    " b "
+  ],
+  "key": {
+    "g": {
+      "item": "nulls_armory:voidshell_ingot"
+    },
+    "b": {
+      "item": "minecraft:bone"
+    },
+    "p": {
+      "item": "minecraft:gunpowder"
+    }
+  },
+  "result": {
+    "id": "nulls_armory:true_knife",
+    "count": 1
+  }
+}

@@ -55,17 +55,14 @@ public class OrthosPrimeSwordItem extends SwordItem {
 
             for (StatusEffectInstance effect : targetEffects) {
                 damageMultiplier += statusDamageModifier * (effect.getAmplifier() + 1);
-                NullsArmory.LOGGER.info(effect.getTranslationKey());
             }
 
             Random random = Random.createLocal();
             if (random.nextFloat() < statusChance) {
-                living.addStatusEffect(new StatusEffectInstance(StatusEffects.WITHER, 20, 1));
+                living.addStatusEffect(new StatusEffectInstance(StatusEffects.WITHER, 100, 1));
             }
 
-//            NullsArmory.LOGGER.info("Attack Damage: " + baseAttackDamage + ", Extra Damage: " + getAttackDamage() * (damageMultiplier + 1)); // Add 1 to the damage multiplier because it will only recognize the higher between the original hit's damage and the extra damage
-
-            return baseAttackDamage * (damageMultiplier - 1);
+            return baseAttackDamage * damageMultiplier;
         }
 
         return 0;

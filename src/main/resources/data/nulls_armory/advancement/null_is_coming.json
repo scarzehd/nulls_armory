@@ -1,0 +1,35 @@
+{
+  "criteria": {
+    "viodgel": {
+      "conditions": {
+        "items": [
+          {
+            "items": "nulls_armory:voidgel_orb"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "advancements.nulls_armory.root.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "nulls_armory:voidgel_orb"
+    },
+    "show_toast": false,
+    "title": {
+      "translate": "advancements.nulls_armory.root.title"
+    }
+  },
+  "requirements": [
+    [
+      "viodgel"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

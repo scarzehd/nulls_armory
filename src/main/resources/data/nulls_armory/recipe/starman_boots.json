@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "v v",
+    "e e"
+  ],
+  "key": {
+    "v": {
+      "item": "nulls_armory:voidshell_ingot"
+    },
+    "e": {
+      "item": "minecraft:end_stone"
+    }
+  },
+  "result": {
+    "id": "nulls_armory:starman_boots",
+    "count": 1
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "nulls_armory:voidgel_orb"
+    },
+    {
+      "item": "nulls_armory:voidgel_orb"
+    },
+    {
+      "item": "nulls_armory:voidgel_orb"
+    },
+    {
+      "item": "nulls_armory:voidgel_orb"
+    },
+    {
+      "item": "minecraft:copper_ingot"
+    }
+  ],
+  "pattern": [
+    "dgd",
+    "dgd",
+    " r "
+  ],
+  "key": {
+    "r": {
+      "item": "minecraft:blaze_rod"
+    },
+    "g": {
+      "item": "nulls_armory:voidshell_ingot"
+    },
+    "d": {
+      "item": "minecraft:blaze_powder"
+    }
+  },
+  "result": {
+    "id": "nulls_armory:crucible",
+    "count": 1
+  }
+}

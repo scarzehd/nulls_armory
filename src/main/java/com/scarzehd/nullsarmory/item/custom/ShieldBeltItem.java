@@ -13,8 +13,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
 
-import java.util.UUID;
-
 public class ShieldBeltItem extends TrinketItem {
     public ShieldBeltItem(Item.Settings settings) {
         super(settings);
@@ -24,7 +22,7 @@ public class ShieldBeltItem extends TrinketItem {
     public Multimap<RegistryEntry<EntityAttribute>, EntityAttributeModifier> getModifiers(ItemStack stack, SlotReference slot, LivingEntity entity, Identifier slotIdentifier) {
         Multimap<RegistryEntry<EntityAttribute>, EntityAttributeModifier> modifiers = super.getModifiers(stack, slot, entity, slotIdentifier);
 
-        modifiers.put(ModAttributes.MAX_SHIELDS, new EntityAttributeModifier(Identifier.of(NullsArmory.MOD_ID, "max_shields"), 4, EntityAttributeModifier.Operation.ADD_VALUE));
+        modifiers.put(ModAttributes.MAX_SHIELDS, new EntityAttributeModifier(Identifier.of(NullsArmory.MOD_ID, "shield_belt"), 4, EntityAttributeModifier.Operation.ADD_VALUE));
 
         return modifiers;
     }

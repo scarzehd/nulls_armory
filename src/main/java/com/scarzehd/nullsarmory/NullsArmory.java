@@ -3,6 +3,8 @@ package com.scarzehd.nullsarmory;
 import com.scarzehd.nullsarmory.attribute.ModAttributes;
 import com.scarzehd.nullsarmory.block.ModBlocks;
 import com.scarzehd.nullsarmory.item.ModItems;
+import com.scarzehd.nullsarmory.loot.ModLootTables;
+import com.scarzehd.nullsarmory.sound.ModSounds;
 import com.scarzehd.nullsarmory.world.ModWorldGen;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
@@ -14,11 +16,14 @@ public class NullsArmory implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		ModArmorMaterials.registerArmorMaterials();
 		ModItems.registerItems();
 		ModBlocks.registerBlocks();
 		ModWorldGen.registerWorldGen();
 		ModTags.registerTags();
 		ModAttributes.registerAttributes();
 		ModItemGroups.registerItemGroups();
+		ModSounds.registerSounds();
+		ModLootTables.modifyLootTables();
 	}
 }

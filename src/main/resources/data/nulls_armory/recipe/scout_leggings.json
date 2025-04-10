@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "nulls_armory:scout_salvage_leggings"
+    },
+    {
+      "item": "nulls_armory:voidshell_ingot"
+    },
+    {
+      "item": "nulls_armory:voidshell_ingot"
+    }
+  ],
+  "result": {
+    "id": "nulls_armory:scout_leggings"
+  }
+}

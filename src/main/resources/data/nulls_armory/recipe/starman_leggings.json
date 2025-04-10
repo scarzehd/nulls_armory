@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "vvv",
+    "v v",
+    "c c"
+  ],
+  "key": {
+    "v": {
+      "item": "nulls_armory:voidshell_ingot"
+    },
+    "c": {
+      "item": "minecraft:popped_chorus_fruit"
+    }
+  },
+  "result": {
+    "id": "nulls_armory:starman_leggings",
+    "count": 1
+  }
+}
