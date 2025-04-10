@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "nulls_armory:item/starman_boots"
+    "layer0": "nulls_armory:item/trench_boots"
   }
 }
