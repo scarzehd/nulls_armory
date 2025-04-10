@@ -1,4 +1,5 @@
 {
+  "parent": "nulls_armory:null_is_coming",
   "criteria": {
     "blades_for_days": {
       "trigger": "minecraft:inventory_changed",

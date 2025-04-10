@@ -19,6 +19,8 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class ShieldsHudMixin {
     private static final Identifier SHIELD_HEARTS_TEXTURE = Identifier.of(NullsArmory.MOD_ID, "textures/gui/shield_hearts.png");
 
+    private static final Identifier OVERFLOW_HEARTS_TEXTURE = Identifier.of(NullsArmory.MOD_ID, "textures/gui/overflow_hearts.png");
+
 
     @Inject(method = "render", at = @At("HEAD"))
     public void onHudRender(DrawContext context, RenderTickCounter tickCounter, CallbackInfo info) {
@@ -47,7 +49,27 @@ public class ShieldsHudMixin {
 
         double shields = Math.ceil(ModComponents.SHIELDS.get(player).getCurrentShields());
 
-        for (int i = 0; i < maxShields; i++) {
+        int overflow = 0;
+
+        if (shields < 0) {
+            overflow = (int)Math.ceil(-shields / 2);
+
+
+            for (int i = 0; i < overflow; i++) {
+                x = width / 2 - 91 + (i % 10) * 8;
+                y = baseY - (int) (double) (i / 10) * 10;
+                drawOverflowContainer(context, x, y, false);
+            }
+
+            if (-shields % 2 == 1) {
+                x = width / 2 - 91 + (((int)-shields / 2) % 10) * 8;
+                y = baseY - (int)Math.floor(-shields / 20) * 10;
+                drawOverflowContainer(context, x, y, true);
+            }
+        }
+
+        if (overflow > maxShields) return;
+        for (int i = overflow; i < maxShields; i++) {
             x = width / 2 - 91 + (i % 10) * 8;
             y = baseY - (int) (double) (i / 10) * 10;
             drawShieldsContainer(context, x, y);
@@ -68,6 +90,10 @@ public class ShieldsHudMixin {
 
     private void drawShieldsContainer(DrawContext context, int x, int y) {
         context.drawTexture(SHIELD_HEARTS_TEXTURE, x, y, 20, 0, 9, 9, 29, 9);
+    }
+
+    private void drawOverflowContainer(DrawContext context, int x, int y, boolean half) {
+        context.drawTexture(OVERFLOW_HEARTS_TEXTURE, x, y, half ? 9 : 0, 0, 9, 9, 18, 9);
     }
 
     private void drawShieldsHeart(DrawContext context, int x, int y, boolean half) {
