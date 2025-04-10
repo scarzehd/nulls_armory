@@ -58,7 +58,7 @@ public class ShieldsComponent implements IShieldsComponent {
                 rechargeTimer--;
             } else {
                 setCurrentShields(shields + 1);
-                rechargeTimer = (int)Math.round(20 / provider.getAttributeValue(ModAttributes.SHIELDS_RECHARGE_RATE));
+                rechargeTimer = (int)Math.round(provider.getAttributeValue(ModAttributes.SHIELDS_RECHARGE_RATE));
             }
         }
 

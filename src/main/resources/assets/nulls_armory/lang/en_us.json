@@ -33,7 +33,7 @@
 
   "attribute.nulls_armory.max_shields": "Max Shields",
   "attribute.nulls_armory.shields_recharge_delay": "Shield Recharge Delay",
-  "attribute.nulls_armory.shields_recharge_rate": "Shield Recharge Rate",
+  "attribute.nulls_armory.shields_recharge_rate": "Shield Recharge Time",
 
   "itemGroup.nulls_armory.void_items": "Void Items"
 }
