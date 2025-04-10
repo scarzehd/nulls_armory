@@ -36,10 +36,12 @@ public class ShieldsHudMixin {
 
         int x;
 
-        int renderedHealth = (int)Math.ceil((player.getAttributeValue(EntityAttributes.GENERIC_MAX_HEALTH) + player.getAbsorptionAmount()) / 10);
+        int renderedHealth = (int)Math.ceil((player.getAttributeValue(EntityAttributes.GENERIC_MAX_HEALTH) + player.getAbsorptionAmount()) / 20);
+
+        NullsArmory.LOGGER.info(String.valueOf(renderedHealth));
 
         int y;
-        int baseY = height - 29 - renderedHealth * 10;
+        int baseY = height - 40 - renderedHealth * 8;
 
         if (player.getAttributeValue(EntityAttributes.GENERIC_ARMOR) > 0) {
             baseY -= 10;
@@ -57,13 +59,13 @@ public class ShieldsHudMixin {
 
             for (int i = 0; i < overflow; i++) {
                 x = width / 2 - 91 + (i % 10) * 8;
-                y = baseY - (int) (double) (i / 10) * 10;
+                y = baseY - (int) (double) (i / 10) * 9;
                 drawOverflowContainer(context, x, y, false);
             }
 
             if (-shields % 2 == 1) {
                 x = width / 2 - 91 + (((int)-shields / 2) % 10) * 8;
-                y = baseY - (int)Math.floor(-shields / 20) * 10;
+                y = baseY - (int)Math.floor(-shields / 20) * 9;
                 drawOverflowContainer(context, x, y, true);
             }
         }

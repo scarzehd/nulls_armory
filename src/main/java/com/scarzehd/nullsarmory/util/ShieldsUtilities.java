@@ -42,6 +42,9 @@ public class ShieldsUtilities {
             shieldsComponent.setCurrentShields(newShields);
 
             shieldsComponent.resetRechargeDelay();
+
+            entity.damageArmor(source, 1);
+
             return 0;
         } else {
             shieldsComponent.resetRechargeDelay();
