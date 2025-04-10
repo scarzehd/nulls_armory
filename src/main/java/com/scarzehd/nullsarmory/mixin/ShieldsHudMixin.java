@@ -38,8 +38,6 @@ public class ShieldsHudMixin {
 
         int renderedHealth = (int)Math.ceil((player.getAttributeValue(EntityAttributes.GENERIC_MAX_HEALTH) + player.getAbsorptionAmount()) / 20);
 
-        NullsArmory.LOGGER.info(String.valueOf(renderedHealth));
-
         int y;
         int baseY = height - 40 - renderedHealth * 8;
 

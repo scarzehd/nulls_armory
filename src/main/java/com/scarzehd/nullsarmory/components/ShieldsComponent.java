@@ -64,7 +64,6 @@ public class ShieldsComponent implements IShieldsComponent {
 
         if (shields > maxShields) {
             setCurrentShields(maxShields);
-            NullsArmory.LOGGER.info(String.valueOf(shields));
         }
     }
 
