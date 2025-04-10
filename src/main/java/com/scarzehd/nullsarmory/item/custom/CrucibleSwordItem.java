@@ -12,7 +12,7 @@ import net.minecraft.world.World;
 import java.util.List;
 
 public class CrucibleSwordItem extends SwordItem {
-    private static final float NETHER_MOB_DAMAGE_MODIFIER = 1.5f; // the damage against nether mobs expressed as a multiplier of the base damage
+    private static final float NETHER_MOB_DAMAGE_MODIFIER = 2f; // the damage against nether mobs expressed as a multiplier of the base damage
 
     public CrucibleSwordItem(ToolMaterial toolMaterial, Settings settings) {
         super(toolMaterial, settings);

@@ -24,10 +24,20 @@ public class ModItemGroups {
                 entries.add(ModItems.ELDER_INGOT);
                 entries.add(ModItems.KINETIC_CONVERTER);
 
-                entries.add(ModItems.RISING_STAR_HELMET);
-                entries.add(ModItems.RISING_STAR_CHESTPLATE);
-                entries.add(ModItems.RISING_STAR_LEGGINGS);
-                entries.add(ModItems.RISING_STAR_BOOTS);
+                entries.add(ModItems.STARMAN_HELMET);
+                entries.add(ModItems.STARMAN_CHESTPLATE);
+                entries.add(ModItems.STARMAN_LEGGINGS);
+                entries.add(ModItems.STARMAN_BOOTS);
+
+                entries.add(ModItems.SCOUT_HELMET);
+                entries.add(ModItems.SCOUT_CHESTPLATE);
+                entries.add(ModItems.SCOUT_LEGGINGS);
+                entries.add(ModItems.SCOUT_BOOTS);
+
+                entries.add(ModItems.TRENCH_HELMET);
+                entries.add(ModItems.TRENCH_CHESTPLATE);
+                entries.add(ModItems.TRENCH_LEGGINGS);
+                entries.add(ModItems.TRENCH_BOOTS);
 
                 entries.add(ModBlocks.ELDER_BLOCK.asItem());
                 entries.add(ModBlocks.VOID_ORE.asItem());

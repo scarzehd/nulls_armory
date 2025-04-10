@@ -28,7 +28,7 @@ public class ModArmorMaterials {
         return RegistryEntry.of(material);
     }
 
-    public static final RegistryEntry<ArmorMaterial> RISING_STAR = registerMaterial("rising_star",
+    public static final RegistryEntry<ArmorMaterial> STARMAN = registerMaterial("rising_star",
             Map.of(
                     ArmorItem.Type.HELMET, 0,
                     ArmorItem.Type.CHESTPLATE, 0,
