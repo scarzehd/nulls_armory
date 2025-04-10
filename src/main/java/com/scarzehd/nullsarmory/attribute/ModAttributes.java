@@ -14,7 +14,7 @@ public class ModAttributes {
 
     public static final RegistryEntry<EntityAttribute> SHIELDS_RECHARGE_RATE = registerEntityAttribute("generic.shields_recharge_rate", new CustomEntityAttribute("attribute.nulls_armory.shields_recharge_rate", 10), true, EntityAttribute.Category.NEGATIVE);
 
-    public static final RegistryEntry<EntityAttribute> SHIELDS_UNDERFLOW = registerEntityAttribute("generic.shields_underflow", new CustomEntityAttribute("attribute.nulls_armory.shields_underflow", 0), true, EntityAttribute.Category.POSITIVE);
+    public static final RegistryEntry<EntityAttribute> SHIELDS_UNDERFLOW = registerEntityAttribute("generic.shields_underflow", new CustomEntityAttribute("attribute.nulls_armory.shields_underflow", 0), true, EntityAttribute.Category.NEGATIVE);
 
     public static void registerAttributes()  {
         NullsArmory.LOGGER.info("Registering Mod Attributes");

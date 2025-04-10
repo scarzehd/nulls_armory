@@ -36,7 +36,6 @@
 
   "tooltip.nulls_armory.crucible": "It is said that the Crucible is especially painful in the Nether...",
   "tooltip.nulls_armory.true_knife": "Damage increases with LV.",
-  "tooltip.nulls_armory.true_knife_2": "\"Add a little Violence\"",
 
   "attribute.nulls_armory.max_shields": "Max Shields",
   "attribute.nulls_armory.shields_recharge_delay": "Shield Recharge Delay",
@@ -61,5 +60,9 @@
   "advancements.nulls_armory.root.description": "Null is coming. You'll need gear to stop him",
 
   "advancement.nulls_armory.add_violence.title": "Add a Little Violence",
-  "advancement.nulls_armory.add_violence.description": "Increase your Level of Violence to power up your True Knife"
+  "advancement.nulls_armory.add_violence.description": "Increase your Level of Violence to power up your True Knife",
+
+  "sound.nulls_armory.shields_break": "Shields Break",
+  "sound.nulls_armory.shields_recharge": "Shields Recharge",
+  "sound.nulls_armory.shields_recharge_complete": "Shields Recharge Complete"
 }

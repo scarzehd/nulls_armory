@@ -121,9 +121,10 @@ public class ShieldsComponent implements IShieldsComponent {
         } else if (shields > oldShields && !soundManager.isPlaying(rechargeSound)) {
             soundManager.play(rechargeSound);
         } else if (shields <= 0 && shields < oldShields) {
-            soundManager.play(new PositionedSoundInstance(ModSounds.SHIELDS_BREAK, SoundCategory.PLAYERS, 1f, 1f, Random.create(), new BlockPos(0, 0, 0)) {{
-                this.relative = true;
-            }});
+            provider.playSound(ModSounds.SHIELDS_BREAK);
+//            soundManager.play(new PositionedSoundInstance(ModSounds.SHIELDS_BREAK, SoundCategory.PLAYERS, 1f, 1f, Random.create(), new BlockPos(0, 0, 0)) {{
+//                this.relative = true;
+//            }});
         }
     }
 }
