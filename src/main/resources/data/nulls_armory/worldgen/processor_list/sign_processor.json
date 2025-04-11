@@ -1,0 +1,15 @@
+{
+  "processors": [
+    {
+      "processor_type": "nulls_armory:sign_processor",
+      "text": {
+        "messages": [
+          "asdf",
+          "asdf",
+          "asdf",
+          "asdf"
+        ]
+      }
+    }
+  ]
+}

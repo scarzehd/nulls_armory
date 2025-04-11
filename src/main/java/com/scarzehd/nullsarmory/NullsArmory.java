@@ -6,6 +6,7 @@ import com.scarzehd.nullsarmory.item.ModItems;
 import com.scarzehd.nullsarmory.loot.ModLootTables;
 import com.scarzehd.nullsarmory.sound.ModSounds;
 import com.scarzehd.nullsarmory.world.ModWorldGen;
+import com.scarzehd.nullsarmory.world.structure.processor.ModStructureProcessors;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,5 +26,6 @@ public class NullsArmory implements ModInitializer {
 		ModItemGroups.registerItemGroups();
 		ModSounds.registerSounds();
 		ModLootTables.modifyLootTables();
+		ModStructureProcessors.registerStructureProcessors();
 	}
 }
