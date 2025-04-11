@@ -1,7 +1,19 @@
 {
   "structures": [
     {
-      "structure": "nulls_armory:null_lull",
+      "structure": "nulls_armory:null_lull_skeleton_1",
+      "weight": 1
+    },
+    {
+      "structure": "nulls_armory:null_lull_skeleton_2",
+      "weight": 1
+    },
+    {
+      "structure": "nulls_armory:null_lull_zombie_1",
+      "weight": 1
+    },
+    {
+      "structure": "nulls_armory:null_lull_zombie_2",
       "weight": 1
     }
   ],

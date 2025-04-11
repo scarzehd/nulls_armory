@@ -5,7 +5,9 @@ import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import com.scarzehd.nullsarmory.NullsArmory;
 import com.scarzehd.nullsarmory.util.SignUtilities;
+import net.minecraft.block.AbstractSignBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.HangingSignBlock;
 import net.minecraft.block.SignBlock;
 import net.minecraft.block.entity.SignText;
 import net.minecraft.nbt.NbtCompound;
@@ -76,7 +78,7 @@ public class SignProcessor extends StructureProcessor {
         Block block = currentBlockInfo.state().getBlock();
 
 
-        if (block instanceof SignBlock) {
+        if (block instanceof AbstractSignBlock) {
 
             DynamicOps<NbtElement> dynamicOps = world.getRegistryManager().getOps(NbtOps.INSTANCE);
             NbtCompound nbt = currentBlockInfo.nbt();
