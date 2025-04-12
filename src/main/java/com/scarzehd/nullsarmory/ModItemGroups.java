@@ -43,6 +43,7 @@ public class ModItemGroups {
                 entries.add(ModItems.TRENCH_BOOTS);
 
                 entries.add(ModBlocks.VOID_ORE.asItem());
+                entries.add(ModBlocks.NULL_MARROW.asItem());
             }).build());
 
     public static void registerItemGroups() {
