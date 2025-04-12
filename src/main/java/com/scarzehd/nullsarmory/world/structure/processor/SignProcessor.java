@@ -2,34 +2,25 @@ package com.scarzehd.nullsarmory.world.structure.processor;
 
 import com.mojang.serialization.DynamicOps;
 import com.mojang.serialization.MapCodec;
-import com.mojang.serialization.codecs.RecordCodecBuilder;
 import com.scarzehd.nullsarmory.NullsArmory;
 import com.scarzehd.nullsarmory.util.SignUtilities;
 import net.minecraft.block.AbstractSignBlock;
 import net.minecraft.block.Block;
-import net.minecraft.block.HangingSignBlock;
-import net.minecraft.block.SignBlock;
 import net.minecraft.block.entity.SignText;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.nbt.NbtElement;
-import net.minecraft.nbt.NbtInt;
 import net.minecraft.nbt.NbtOps;
 import net.minecraft.structure.StructurePlacementData;
 import net.minecraft.structure.StructureTemplate;
-import net.minecraft.structure.processor.NopStructureProcessor;
 import net.minecraft.structure.processor.StructureProcessor;
 import net.minecraft.structure.processor.StructureProcessorType;
-import net.minecraft.text.Text;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.world.WorldView;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
-import java.util.function.Supplier;
 
 public class SignProcessor extends StructureProcessor {
 //    public static final MapCodec<SignProcessor> CODEC = RecordCodecBuilder.mapCodec(
@@ -76,7 +67,6 @@ public class SignProcessor extends StructureProcessor {
             StructurePlacementData data
     ) {
         Block block = currentBlockInfo.state().getBlock();
-
 
         if (block instanceof AbstractSignBlock) {
 

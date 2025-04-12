@@ -27,7 +27,7 @@ import java.util.UUID;
 
 public class TrueKnifeSwordItem extends SwordItem {
     public TrueKnifeSwordItem(ToolMaterial toolMaterial) {
-        super(toolMaterial, new Item.Settings().maxCount(1).maxDamage(3500)
+        super(toolMaterial, new Item.Settings().maxCount(1)
                 .attributeModifiers(AttributeModifiersComponent.builder()
                         .add(EntityAttributes.GENERIC_ATTACK_SPEED, new EntityAttributeModifier(BASE_ATTACK_SPEED_MODIFIER_ID, 2.5, EntityAttributeModifier.Operation.ADD_VALUE), AttributeModifierSlot.MAINHAND)
                         .build()));

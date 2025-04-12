@@ -5,10 +5,7 @@ import com.scarzehd.nullsarmory.NullsArmory;
 import com.scarzehd.nullsarmory.item.custom.*;
 import com.scarzehd.nullsarmory.util.ShieldsUtilities;
 import net.minecraft.component.type.AttributeModifierSlot;
-import net.minecraft.item.ArmorItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.SwordItem;
-import net.minecraft.item.ToolMaterials;
+import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
@@ -22,7 +19,7 @@ public class ModItems {
         NullsArmory.LOGGER.info("Registering Mod Items");
     }
 
-    public static final Item TRUE_KNIFE = registerItem("true_knife", new TrueKnifeSwordItem(ToolMaterials.STONE));
+    public static final Item TRUE_KNIFE = registerItem("true_knife", new TrueKnifeSwordItem(ModToolMaterials.VOIDSHELL));
 
     public static final Item CRUCIBLE = registerItem("crucible", new CrucibleSwordItem(ToolMaterials.DIAMOND, new Item.Settings().maxCount(1).maxDamage(1000).attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.DIAMOND, 8, -3f))));
 
