@@ -25,6 +25,8 @@ public class ModItems {
 
     public static final Item ORTHOS_PRIME = registerItem("orthos_prime", new OrthosPrimeSwordItem(ToolMaterials.DIAMOND, new Item.Settings().maxCount(1).maxDamage(1000).attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.DIAMOND, 5, -1f))));
 
+    public static final Item YOSHIMITSU_BANNER = registerItem("yoshimitsu_banner", new YoshimitsuBannerItem());
+
     public static final Item VOIDGEL_ORB = registerItem("voidgel_orb", new Item(new Item.Settings()));
 
     public static final Item VOIDSHELL_INGOT = registerItem("voidshell_ingot", new Item(new Item.Settings()));
