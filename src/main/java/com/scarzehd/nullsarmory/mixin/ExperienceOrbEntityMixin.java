@@ -27,7 +27,7 @@ public abstract class ExperienceOrbEntityMixin {
                 if (stack.getItem().equals(ModItems.YOSHIMITSU_BANNER)) {
                     amount = (int)Math.ceil(amount * 1.25f);
 
-                    int duration = 40 * ((ExperienceOrbEntity)(Object)this).getOrbSize();
+                    int duration = 30 * ((ExperienceOrbEntity)(Object)this).getOrbSize();
 
                     if (serverPlayer.hasStatusEffect(StatusEffects.REGENERATION)) {
                         StatusEffectInstance instance = serverPlayer.getStatusEffect(StatusEffects.REGENERATION);
@@ -35,7 +35,7 @@ public abstract class ExperienceOrbEntityMixin {
                             duration += instance.getDuration();
                     }
 
-                    duration = Math.min(duration, 100);
+                    duration = Math.min(duration, 110);
 
                     serverPlayer.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, duration, 1));
                     return;
