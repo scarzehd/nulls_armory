@@ -15,18 +15,18 @@
   "item.nulls_armory.starman_helmet": "Starman Helmet",
 
   "item.nulls_armory.scout_boots": "SC-Scout Boots",
-  "item.nulls_armory.scout_leggings": "SC-Scout Leggings",
-  "item.nulls_armory.scout_chestplate": "SC-Scout Chestplate",
+  "item.nulls_armory.scout_leggings": "SC-Scout Skirt",
+  "item.nulls_armory.scout_chestplate": "SC-Scout Breastplate",
   "item.nulls_armory.scout_helmet": "SC-Scout Helmet",
 
   "item.nulls_armory.trench_boots": "Trench Resonator Boots",
-  "item.nulls_armory.trench_leggings": "Trench Resonator Leggings",
+  "item.nulls_armory.trench_leggings": "Trench Resonator Trousers",
   "item.nulls_armory.trench_chestplate": "Trench Resonator Chestplate",
   "item.nulls_armory.trench_helmet": "Trench Resonator Helmet",
 
   "item.nulls_armory.scout_salvage_boots": "Salvaged SC-Scout Boots",
-  "item.nulls_armory.scout_salvage_leggings": "Salvaged SC-Scout Leggings",
-  "item.nulls_armory.scout_salvage_chestplate": "Salvaged SC-Scout Chestplate",
+  "item.nulls_armory.scout_salvage_leggings": "Salvaged SC-Scout Skirt",
+  "item.nulls_armory.scout_salvage_chestplate": "Salvaged SC-Scout Breastplate",
   "item.nulls_armory.scout_salvage_helmet": "Salvaged SC-Scout Helmet",
 
   "block.nulls_armory.void_ore": "Void Ore",
@@ -51,7 +51,7 @@
   "advancements.nulls_armory.blades_for_days.title": "Blades For Days",
   "advancements.nulls_armory.blades_for_days.description": "Obtain every Null's Armory weapon",
 
-  "advancements.nulls_armory.sc_scout.title": "Like a Shield Break in Slow Motion",
+  "advancements.nulls_armory.sc_scout.title": "Grass Grows, Birds Fly, Sun Shines",
   "advancements.nulls_armory.sc_scout.description": "Obtain the full SC-Scout set",
 
   "advancements.nulls_armory.root.title": "Null Is Coming",
