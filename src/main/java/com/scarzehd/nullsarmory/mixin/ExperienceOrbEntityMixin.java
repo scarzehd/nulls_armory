@@ -1,7 +1,10 @@
 package com.scarzehd.nullsarmory.mixin;
 
+import com.scarzehd.nullsarmory.NullsArmory;
 import com.scarzehd.nullsarmory.item.ModItems;
 import net.minecraft.entity.ExperienceOrbEntity;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.network.ServerPlayerEntity;
@@ -23,6 +26,18 @@ public abstract class ExperienceOrbEntityMixin {
             for (ItemStack stack : serverPlayer.getHandItems()) {
                 if (stack.getItem().equals(ModItems.YOSHIMITSU_BANNER)) {
                     amount = (int)Math.ceil(amount * 1.25f);
+
+                    int duration = 40 * ((ExperienceOrbEntity)(Object)this).getOrbSize();
+
+                    if (serverPlayer.hasStatusEffect(StatusEffects.REGENERATION)) {
+                        StatusEffectInstance instance = serverPlayer.getStatusEffect(StatusEffects.REGENERATION);
+                        if (instance.getAmplifier() <= 1)
+                            duration += instance.getDuration();
+                    }
+
+                    duration = Math.min(duration, 100);
+
+                    serverPlayer.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, duration, 1));
                     return;
                 }
             }
