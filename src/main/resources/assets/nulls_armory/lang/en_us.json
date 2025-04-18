@@ -66,5 +66,6 @@
 
   "sound.nulls_armory.shields_break": "Shields Break",
   "sound.nulls_armory.shields_recharge": "Shields Recharge",
-  "sound.nulls_armory.shields_recharge_complete": "Shields Recharge Complete"
+  "sound.nulls_armory.shields_recharge_complete": "Shields Recharge Complete",
+  "sound.nulls_armory.shields_armor_equip": "Equipped Shields Armor"
 }

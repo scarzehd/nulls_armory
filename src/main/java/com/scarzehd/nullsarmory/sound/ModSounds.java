@@ -17,4 +17,6 @@ public class ModSounds {
     public static final SoundEvent SHIELDS_BREAK = registerSound("shields_break");
     public static final SoundEvent SHIELDS_RECHARGE = registerSound("shields_recharge");
     public static final SoundEvent SHIELDS_RECHARGE_COMPLETE = registerSound("shields_recharge_complete");
+
+    public static final SoundEvent SHIELDS_ARMOR_EQUIP = registerSound("shields_armor_equip");
 }
