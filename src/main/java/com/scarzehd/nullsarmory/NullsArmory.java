@@ -17,6 +17,7 @@ public class NullsArmory implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		ModDamageTypes.registerDamageTypes();
 		ModArmorMaterials.registerArmorMaterials();
 		ModItems.registerItems();
 		ModBlocks.registerBlocks();

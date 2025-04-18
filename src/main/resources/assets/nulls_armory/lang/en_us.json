@@ -11,6 +11,8 @@
 
   "item.nulls_armory.yoshimitsu_banner": "Yoshimitsu's Banner",
 
+  "item.nulls_armory.dragon_fangs": "Dragon Fangs",
+
   "item.nulls_armory.starman_boots": "Starman Boots",
   "item.nulls_armory.starman_leggings": "Starman Leggings",
   "item.nulls_armory.starman_chestplate": "Starman Chestplate",
@@ -50,7 +52,7 @@
   "advancements.nulls_armory.trench_resonator.title": "Poisoned to my Armored Core",
   "advancements.nulls_armory.trench_resonator.description": "Obtain the full Trench Resonator set",
 
-  "advancements.nulls_armory.blades_for_days.title": "Blades For Days",
+  "advancements.nulls_armory.blades_for_days.title": "Bladees For Days",
   "advancements.nulls_armory.blades_for_days.description": "Obtain every Null's Armory weapon",
 
   "advancements.nulls_armory.sc_scout.title": "Grass Grows, Birds Fly, Sun Shines",

@@ -27,6 +27,8 @@ public class ModItems {
 
     public static final Item YOSHIMITSU_BANNER = registerItem("yoshimitsu_banner", new YoshimitsuBannerItem());
 
+    public static final Item DRAGON_FANGS = registerItem("dragon_fangs", new DragonFangsItem());
+
     public static final Item VOIDGEL_ORB = registerItem("voidgel_orb", new Item(new Item.Settings()));
 
     public static final Item VOIDSHELL_INGOT = registerItem("voidshell_ingot", new Item(new Item.Settings()));
