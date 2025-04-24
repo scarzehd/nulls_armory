@@ -23,6 +23,7 @@ public class ModItemGroups {
                 entries.add(ModItems.TRUE_KNIFE);
                 entries.add(ModItems.YOSHIMITSU_BANNER);
                 entries.add(ModItems.DRAGON_FANGS);
+                entries.add(ModItems.VOID_COMPASS);
 
                 entries.add(ModItems.STARMAN_HELMET);
                 entries.add(ModItems.STARMAN_CHESTPLATE);
