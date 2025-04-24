@@ -8,7 +8,7 @@
         "damage_multiplier": 1,
         "angle": 120,
         "upswing": 0.5,
-        "animation": "nulls_armory:dragon_fangs_swing_1",
+        "animation": "nulls_armory:hellkite_claws_swing_1",
         "swing_sound": {
           "id": "bettercombat:sickle_slash"
         }
@@ -19,7 +19,7 @@
         "damage_multiplier": 1,
         "angle": 0,
         "upswing": 0.5,
-        "animation": "nulls_armory:dragon_fangs_swing_2",
+        "animation": "nulls_armory:hellkite_claws_swing_2",
         "swing_sound": {
           "id": "bettercombat:sickle_slash",
           "pitch": 0.8

@@ -13,4 +13,6 @@ public class ModDamageTypes {
     }
 
     public static RegistryKey<DamageType> BLOOD_RAGE = register("blood_rage");
+
+    public static RegistryKey<DamageType> BLEED = register("bleed");
 }

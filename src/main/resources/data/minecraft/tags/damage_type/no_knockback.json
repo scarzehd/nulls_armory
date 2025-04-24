@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "nulls_armory:blood_rage"
+    "nulls_armory:blood_rage",
+    "nulls_armory:bleed"
   ]
 }

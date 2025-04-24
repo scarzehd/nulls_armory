@@ -1,6 +1,5 @@
 package com.scarzehd.nullsarmory.item.custom;
 
-import com.scarzehd.nullsarmory.NullsArmory;
 import net.minecraft.component.type.AttributeModifierSlot;
 import net.minecraft.component.type.AttributeModifiersComponent;
 import net.minecraft.entity.Entity;
@@ -9,12 +8,9 @@ import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.Identifier;
-import net.minecraft.world.World;
 
-public class DragonFangsItem extends Item {
-    public DragonFangsItem() {
+public class HellkiteClawsItem extends Item {
+    public HellkiteClawsItem() {
         super(new Item.Settings()
             .attributeModifiers(AttributeModifiersComponent.builder()
                     .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, new EntityAttributeModifier(BASE_ATTACK_DAMAGE_MODIFIER_ID, 6f, EntityAttributeModifier.Operation.ADD_VALUE), AttributeModifierSlot.MAINHAND)

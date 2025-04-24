@@ -2,6 +2,7 @@
   "replace": false,
   "values": [
     "#minecraft:bypasses_invulnerability",
-    "nulls_armory:blood_rage"
+    "nulls_armory:blood_rage",
+    "nulls_armory:bleed"
   ]
 }

@@ -26,7 +26,7 @@ public class PlayerEntityMixin {
     private void attack(Entity target, CallbackInfo info) {
         PlayerEntity self = (PlayerEntity)(Object)this;
 
-        if (self.getMainHandStack().getItem().equals(ModItems.DRAGON_FANGS) && self.getOffHandStack().getItem().equals(ModItems.DRAGON_FANGS)) {
+        if (self.getMainHandStack().getItem().equals(ModItems.HELLKITE_CLAWS) && self.getOffHandStack().getItem().equals(ModItems.HELLKITE_CLAWS)) {
             DamageSource source = new DamageSource(self.getWorld().getRegistryManager().get(RegistryKeys.DAMAGE_TYPE).entryOf(ModDamageTypes.BLOOD_RAGE));
             self.damage(source, 1.0f);
         }

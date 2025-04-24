@@ -1,6 +1,7 @@
 package com.scarzehd.nullsarmory.item.custom;
 
 import com.scarzehd.nullsarmory.NullsArmory;
+import com.scarzehd.nullsarmory.effect.ModStatusEffects;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
@@ -59,7 +60,7 @@ public class OrthosPrimeSwordItem extends SwordItem {
 
             Random random = Random.createLocal();
             if (random.nextFloat() < statusChance) {
-                living.addStatusEffect(new StatusEffectInstance(StatusEffects.WITHER, 100, 1));
+                living.addStatusEffect(new StatusEffectInstance(ModStatusEffects.BLEED, 160, 1)); // BUFFED
             }
 
             return baseAttackDamage * damageMultiplier;

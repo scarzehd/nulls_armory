@@ -23,6 +23,7 @@ public class ShieldBeltItem extends TrinketItem {
         Multimap<RegistryEntry<EntityAttribute>, EntityAttributeModifier> modifiers = super.getModifiers(stack, slot, entity, slotIdentifier);
 
         modifiers.put(ModAttributes.MAX_SHIELDS, new EntityAttributeModifier(Identifier.of(NullsArmory.MOD_ID, "shield_belt"), 4, EntityAttributeModifier.Operation.ADD_VALUE));
+        modifiers.put(ModAttributes.SHIELDS_UNDERFLOW, new EntityAttributeModifier(Identifier.of(NullsArmory.MOD_ID, "shield_belt"), 2, EntityAttributeModifier.Operation.ADD_VALUE));
 
         return modifiers;
     }
