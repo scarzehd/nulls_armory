@@ -6,7 +6,7 @@
       "element": {
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
-        "location": "nulls_armory:null_lull_skeleton_1",
+        "location": "nulls_armory:null_lull_1",
         "processors": "nulls_armory:sign_processor"
       }
     }
