@@ -20,6 +20,7 @@ public class ModItemGroups {
                 entries.add(ModItems.CRUCIBLE);
                 entries.add(ModItems.ORTHOS_PRIME);
                 entries.add(ModItems.SHIELD_BELT);
+                entries.add(ModItems.CAPACITOR_BELT);
                 entries.add(ModItems.TRUE_KNIFE);
                 entries.add(ModItems.YOSHIMITSU_BANNER);
                 entries.add(ModItems.HELLKITE_CLAWS);

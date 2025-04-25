@@ -35,6 +35,8 @@ public class ModItems {
 
     public static final Item SHIELD_BELT = registerItem("shield_belt", new ShieldBeltItem(new Item.Settings().maxCount(1)));
 
+    public static final Item CAPACITOR_BELT = registerItem("capacitor_belt", new CapacitorBeltItem(new Item.Settings().maxCount(1)));
+
     public static final Item VOID_COMPASS = registerItem("void_compass", new VoidCompassItem());
 
     public static final Item STARMAN_HELMET = registerItem("starman_helmet", new ArmorItem(ModArmorMaterials.STARMAN, ArmorItem.Type.HELMET, new Item.Settings().maxCount(1).maxDamage(1000).attributeModifiers(ShieldsUtilities.createShieldAttributeModifierComponent(4, 0, 0, 0, "starman_helmet", AttributeModifierSlot.HEAD))));

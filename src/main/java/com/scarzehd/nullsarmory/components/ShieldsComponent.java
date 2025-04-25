@@ -58,7 +58,7 @@ public class ShieldsComponent implements IShieldsComponent {
                 rechargeTimer--;
             } else {
                 setCurrentShields(shields + 1);
-                rechargeTimer = (int)Math.round(provider.getAttributeValue(ModAttributes.SHIELDS_RECHARGE_RATE));
+                rechargeTimer = (int)Math.max(Math.round(provider.getAttributeValue(ModAttributes.SHIELDS_RECHARGE_RATE)), 1);
             }
         }
 
@@ -85,7 +85,7 @@ public class ShieldsComponent implements IShieldsComponent {
 
     @Override
     public void setCurrentRechargeDelay(int delay) {
-        rechargeDelay = delay;
+        rechargeDelay = Math.max(1, delay);
         ModComponents.SHIELDS.sync(provider);
     }
 
