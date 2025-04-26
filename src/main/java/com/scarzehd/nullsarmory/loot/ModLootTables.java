@@ -23,6 +23,8 @@ public class ModLootTables {
 
     public static RegistryKey<LootTable> SCOUT_SALVAGE_TABLE = register("scout_salvage");
 
+    public static RegistryKey<LootTable> BELT_TABLE = register("belt");
+
     public static void modifyLootTables() {
         LootTableEvents.MODIFY.register(((registryKey, builder, source, wrapperLookup) -> {
             if (source.isBuiltin()) {
@@ -31,15 +33,15 @@ public class ModLootTables {
                     builder.pool(poolBuilder);
                 }
                 if (registryKey.equals(LootTables.JUNGLE_TEMPLE_CHEST)) {
-                    LootPool.Builder poolBuilder = LootPool.builder().with(ItemEntry.builder(ModItems.SHIELD_BELT).conditionally(RandomChanceLootCondition.builder(.7f)));
+                    LootPool.Builder poolBuilder = LootPool.builder().with(LootTableEntry.builder(BELT_TABLE).conditionally(RandomChanceLootCondition.builder(.7f)));
                     builder.pool(poolBuilder);
                 }
                 if (registryKey.equals(LootTables.ABANDONED_MINESHAFT_CHEST)) {
-                    LootPool.Builder poolBuilder = LootPool.builder().with(ItemEntry.builder(ModItems.SHIELD_BELT).conditionally(RandomChanceLootCondition.builder(0.1f)));
+                    LootPool.Builder poolBuilder = LootPool.builder().with(LootTableEntry.builder(BELT_TABLE).conditionally(RandomChanceLootCondition.builder(0.1f)));
                     builder.pool(poolBuilder);
                 }
                 if (registryKey.equals(LootTables.ANCIENT_CITY_CHEST)) {
-                    LootPool.Builder poolBuilder = LootPool.builder().with(ItemEntry.builder(ModItems.SHIELD_BELT).conditionally(RandomChanceLootCondition.builder(0.15f)));
+                    LootPool.Builder poolBuilder = LootPool.builder().with(LootTableEntry.builder(BELT_TABLE).conditionally(RandomChanceLootCondition.builder(0.2f)));
                     builder.pool(poolBuilder);
                 }
             }
