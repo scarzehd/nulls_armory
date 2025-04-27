@@ -4,9 +4,11 @@ import com.scarzehd.nullsarmory.attribute.ModAttributes;
 import com.scarzehd.nullsarmory.sound.ModSounds;
 import com.scarzehd.nullsarmory.sound.RechargeSoundHandler;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.network.RegistryByteBuf;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.sound.SoundCategory;
 
 public class ShieldsComponent implements IShieldsComponent {
     private double shields = 0;
@@ -95,12 +97,16 @@ public class ShieldsComponent implements IShieldsComponent {
             RechargeSoundHandler.instance.stop();
 
         if (shields >= provider.getAttributeValue(ModAttributes.MAX_SHIELDS)) {
-            provider.playSound(ModSounds.SHIELDS_RECHARGE_COMPLETE);
+            provider.getWorld().playSound(provider, provider.getBlockPos(), ModSounds.SHIELDS_RECHARGE_COMPLETE, SoundCategory.PLAYERS, 1.0f, 1.0f);
             RechargeSoundHandler.instance.stop();
         } else if (shields > oldShields) {
-            RechargeSoundHandler.instance.start();
+            if (provider instanceof PlayerEntity player) {
+                if (player.isMainPlayer()) {
+                    RechargeSoundHandler.instance.start();
+                }
+            }
         } else if (shields <= 0 && shields < oldShields) {
-            provider.playSound(ModSounds.SHIELDS_BREAK);
+            provider.getWorld().playSound(provider, provider.getBlockPos(), ModSounds.SHIELDS_BREAK, SoundCategory.PLAYERS, 1.0f, 1.0f);
         }
     }
 }
