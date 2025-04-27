@@ -3,8 +3,8 @@
   "item.nulls_armory.true_knife": "True Knife",
   "item.nulls_armory.orthos_prime": "Orthos Prime",
 
-  "item.nulls_armory.voidgel_orb": "Voidgel Orb",
-  "item.nulls_armory.voidshell_ingot": "Voidshell Ingot",
+  "item.nulls_armory.voidgel_orb": "Void Orb",
+  "item.nulls_armory.voidshell_ingot": "Void Ingot",
 
   "item.nulls_armory.shield_belt": "Shield Belt",
   "item.nulls_armory.capacitor_belt": "Capacitor Belt",
@@ -71,5 +71,6 @@
   "sound.nulls_armory.shields_recharge_complete": "Shields Recharge Complete",
   "sound.nulls_armory.shields_armor_equip": "Equipped Shields Armor",
 
-  "effect.nulls_armory.bleed": "Bleed"
+  "effect.nulls_armory.bleed": "Bleed",
+  "death.attack.bleed": "%1$s bled out"
 }
