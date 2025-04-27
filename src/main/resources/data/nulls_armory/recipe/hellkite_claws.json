@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "vv",
+    "ss"
+  ],
+  "key": {
+    "s": {
+      "item": "minecraft:stick"
+    },
+    "v": {
+      "item": "nulls_armory:voidshell_ingot"
+    }
+  },
+  "result": {
+    "id": "nulls_armory:hellkite_claws"
+  }
+}

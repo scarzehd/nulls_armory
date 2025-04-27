@@ -25,9 +25,9 @@ import net.minecraft.world.World;
 import java.util.List;
 import java.util.UUID;
 
-public class TrueKnifeSwordItem extends SwordItem {
-    public TrueKnifeSwordItem(ToolMaterial toolMaterial) {
-        super(toolMaterial, new Item.Settings().maxCount(1)
+public class TrueKnifeSwordItem extends Item {
+    public TrueKnifeSwordItem() {
+        super(new Item.Settings().maxCount(1)
                 .attributeModifiers(AttributeModifiersComponent.builder()
                         .add(EntityAttributes.GENERIC_ATTACK_SPEED, new EntityAttributeModifier(BASE_ATTACK_SPEED_MODIFIER_ID, 2.5, EntityAttributeModifier.Operation.ADD_VALUE), AttributeModifierSlot.MAINHAND)
                         .build()));

@@ -8,6 +8,7 @@ import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.damage.DamageTypes;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
@@ -15,13 +16,13 @@ import net.minecraft.util.math.random.Random;
 
 import java.util.Collection;
 
-public class OrthosPrimeSwordItem extends SwordItem {
+public class OrthosPrimeSwordItem extends Item {
     private final float statusChance = .25f;
 
     private final float statusDamageModifier = .25f;
 
-    public OrthosPrimeSwordItem(ToolMaterial toolMaterial, Settings settings) {
-        super(toolMaterial, settings);
+    public OrthosPrimeSwordItem(Settings settings) {
+        super(settings);
     }
 
 //    @Override
