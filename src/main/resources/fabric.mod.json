@@ -20,7 +20,7 @@
 			"com.scarzehd.nullsarmory.NullsArmory"
 		],
 		"client": [
-			"com.scarzehd.nullsarmory.NullsArmoryClient"
+			"com.scarzehd.nullsarmory.client.NullsArmoryClient"
 		],
 		"cardinal-components": [
 			"com.scarzehd.nullsarmory.components.ModComponents"
