@@ -1,11 +1,16 @@
 package com.scarzehd.nullsarmory.loot;
 
 import com.scarzehd.nullsarmory.NullsArmory;
+import com.scarzehd.nullsarmory.item.ModItems;
 import net.fabricmc.fabric.api.loot.v3.LootTableEvents;
 import net.minecraft.block.Blocks;
 import net.minecraft.loot.LootPool;
 import net.minecraft.loot.LootTable;
 import net.minecraft.loot.LootTables;
+import net.minecraft.loot.condition.LootCondition;
+import net.minecraft.loot.condition.LootConditionTypes;
+import net.minecraft.loot.condition.RandomChanceLootCondition;
+import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.entry.LootTableEntry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
@@ -18,11 +23,27 @@ public class ModLootTables {
 
     public static RegistryKey<LootTable> SCOUT_SALVAGE_TABLE = register("scout_salvage");
 
+    public static RegistryKey<LootTable> BELT_TABLE = register("belt");
+
     public static void modifyLootTables() {
         LootTableEvents.MODIFY.register(((registryKey, builder, source, wrapperLookup) -> {
-            if (source.isBuiltin() && registryKey.equals(LootTables.TRIAL_CHAMBERS_REWARD_CHEST)) {
-                LootPool.Builder poolBuilder = LootPool.builder().with(LootTableEntry.builder(SCOUT_SALVAGE_TABLE));
-                builder.pool(poolBuilder);
+            if (source.isBuiltin()) {
+                if (registryKey.equals(LootTables.TRIAL_CHAMBERS_REWARD_CHEST)) {
+                    LootPool.Builder poolBuilder = LootPool.builder().with(LootTableEntry.builder(SCOUT_SALVAGE_TABLE));
+                    builder.pool(poolBuilder);
+                }
+                if (registryKey.equals(LootTables.JUNGLE_TEMPLE_CHEST)) {
+                    LootPool.Builder poolBuilder = LootPool.builder().with(LootTableEntry.builder(BELT_TABLE).conditionally(RandomChanceLootCondition.builder(.7f)));
+                    builder.pool(poolBuilder);
+                }
+                if (registryKey.equals(LootTables.ABANDONED_MINESHAFT_CHEST)) {
+                    LootPool.Builder poolBuilder = LootPool.builder().with(LootTableEntry.builder(BELT_TABLE).conditionally(RandomChanceLootCondition.builder(0.1f)));
+                    builder.pool(poolBuilder);
+                }
+                if (registryKey.equals(LootTables.ANCIENT_CITY_CHEST)) {
+                    LootPool.Builder poolBuilder = LootPool.builder().with(LootTableEntry.builder(BELT_TABLE).conditionally(RandomChanceLootCondition.builder(0.2f)));
+                    builder.pool(poolBuilder);
+                }
             }
         }));
     }

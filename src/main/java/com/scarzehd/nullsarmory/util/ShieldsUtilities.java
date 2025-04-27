@@ -35,9 +35,9 @@ public class ShieldsUtilities {
 
             double newShields = shields - amount;
 
-            double maxUnderflow = entity.getAttributeValue(ModAttributes.SHIELDS_UNDERFLOW);
+            double maxUnderflow = Math.max(entity.getAttributeValue(ModAttributes.SHIELDS_UNDERFLOW), 0); // If shields underflow is negative, default to zero
 
-            if (newShields < maxUnderflow) newShields = maxUnderflow;
+            if (newShields < -maxUnderflow) newShields = -maxUnderflow;
 
             shieldsComponent.setCurrentShields(newShields);
 

@@ -10,5 +10,13 @@
   "shields_recharge_complete": {
     "subtitle": "sound.nulls_armory.shields_recharge_complete",
     "sounds": ["nulls_armory:shields_recharge_complete"]
+  },
+  "shields_armor_equip": {
+    "subtitle": "sound.nulls_armory.equipped_shields_armor",
+    "sounds": [
+      "nulls_armory:shields_armor_equip_1",
+      "nulls_armory:shields_armor_equip_2",
+      "nulls_armory:shields_armor_equip_3"
+    ]
   }
 }

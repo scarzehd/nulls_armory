@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "vp",
+    "vp",
+    "s "
+  ],
+  "key": {
+    "v": {
+      "item": "nulls_armory:voidshell_ingot"
+    },
+    "p": {
+      "item": "minecraft:paper"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "id": "nulls_armory:yoshimitsu_banner"
+  }
+}

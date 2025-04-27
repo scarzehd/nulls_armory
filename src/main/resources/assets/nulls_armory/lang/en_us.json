@@ -5,10 +5,15 @@
 
   "item.nulls_armory.voidgel_orb": "Voidgel Orb",
   "item.nulls_armory.voidshell_ingot": "Voidshell Ingot",
-  "item.nulls_armory.elder_ingot": "Elder Ingot",
 
   "item.nulls_armory.shield_belt": "Shield Belt",
-  "item.nulls_armory.kinetic_converter": "Kinetic Converter",
+  "item.nulls_armory.capacitor_belt": "Capacitor Belt",
+
+  "item.nulls_armory.yoshimitsu_banner": "Yoshimitsu's Banner",
+
+  "item.nulls_armory.hellkite_claws": "Hellkite Claws",
+
+  "item.nulls_armory.void_compass": "Void Compass",
 
   "item.nulls_armory.starman_boots": "Starman Boots",
   "item.nulls_armory.starman_leggings": "Starman Leggings",
@@ -16,27 +21,25 @@
   "item.nulls_armory.starman_helmet": "Starman Helmet",
 
   "item.nulls_armory.scout_boots": "SC-Scout Boots",
-  "item.nulls_armory.scout_leggings": "SC-Scout Leggings",
-  "item.nulls_armory.scout_chestplate": "SC-Scout Chestplate",
+  "item.nulls_armory.scout_leggings": "SC-Scout Skirt",
+  "item.nulls_armory.scout_chestplate": "SC-Scout Breastplate",
   "item.nulls_armory.scout_helmet": "SC-Scout Helmet",
 
   "item.nulls_armory.trench_boots": "Trench Resonator Boots",
-  "item.nulls_armory.trench_leggings": "Trench Resonator Leggings",
+  "item.nulls_armory.trench_leggings": "Trench Resonator Trousers",
   "item.nulls_armory.trench_chestplate": "Trench Resonator Chestplate",
   "item.nulls_armory.trench_helmet": "Trench Resonator Helmet",
 
-  "item.nulls_armory.scout_salvage_boots": "SC-Scout Salvage Boots",
-  "item.nulls_armory.scout_salvage_leggings": "SC-Scout Salvage Leggings",
-  "item.nulls_armory.scout_salvage_chestplate": "SC-Scout Salvage Chestplate",
-  "item.nulls_armory.scout_salvage_helmet": "SC-Scout Salvage Helmet",
+  "item.nulls_armory.scout_salvage_boots": "Salvaged SC-Scout Boots",
+  "item.nulls_armory.scout_salvage_leggings": "Salvaged SC-Scout Skirt",
+  "item.nulls_armory.scout_salvage_chestplate": "Salvaged SC-Scout Breastplate",
+  "item.nulls_armory.scout_salvage_helmet": "Salvaged SC-Scout Helmet",
 
   "block.nulls_armory.void_ore": "Void Ore",
-  "block.nulls_armory.elder_block": "Elder Block",
-  "block.nulls_armory.eldritch_lectern": "Eldritch Lectern",
+  "block.nulls_armory.null_marrow": "Null Marrow",
 
   "tooltip.nulls_armory.crucible": "It is said that the Crucible is especially painful in the Nether...",
   "tooltip.nulls_armory.true_knife": "Damage increases with LV.",
-  "tooltip.nulls_armory.true_knife_2": "\"Add a little Violence\"",
 
   "attribute.nulls_armory.max_shields": "Max Shields",
   "attribute.nulls_armory.shields_recharge_delay": "Shield Recharge Delay",
@@ -45,21 +48,28 @@
 
   "itemGroup.nulls_armory.void_items": "Void Items",
 
-  "advancements.nulls_armory.mr_universe.title": "Mr. Universe",
+  "advancements.nulls_armory.mr_universe.title": "Welcome to the Party, Mr. Universe",
   "advancements.nulls_armory.mr_universe.description": "Obtain the full Starman set",
 
   "advancements.nulls_armory.trench_resonator.title": "Poisoned to my Armored Core",
   "advancements.nulls_armory.trench_resonator.description": "Obtain the full Trench Resonator set",
 
-  "advancements.nulls_armory.blades_for_days.title": "Blades For Days",
+  "advancements.nulls_armory.blades_for_days.title": "Bladees For Days",
   "advancements.nulls_armory.blades_for_days.description": "Obtain every Null's Armory weapon",
 
-  "advancements.nulls_armory.sc_scout.title": "Like a Shield Break in Slow Motion",
+  "advancements.nulls_armory.sc_scout.title": "Grass Grows, Birds Fly, Sun Shines",
   "advancements.nulls_armory.sc_scout.description": "Obtain the full SC-Scout set",
 
   "advancements.nulls_armory.root.title": "Null Is Coming",
   "advancements.nulls_armory.root.description": "Null is coming. You'll need gear to stop him",
 
   "advancement.nulls_armory.add_violence.title": "Add a Little Violence",
-  "advancement.nulls_armory.add_violence.description": "Increase your Level of Violence to power up your True Knife"
+  "advancement.nulls_armory.add_violence.description": "Increase your Level of Violence to power up your True Knife",
+
+  "sound.nulls_armory.shields_break": "Shields Break",
+  "sound.nulls_armory.shields_recharge": "Shields Recharge",
+  "sound.nulls_armory.shields_recharge_complete": "Shields Recharge Complete",
+  "sound.nulls_armory.shields_armor_equip": "Equipped Shields Armor",
+
+  "effect.nulls_armory.bleed": "Bleed"
 }

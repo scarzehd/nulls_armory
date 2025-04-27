@@ -1,6 +1,7 @@
 package com.scarzehd.nullsarmory;
 
 import com.scarzehd.nullsarmory.item.ModItems;
+import com.scarzehd.nullsarmory.sound.ModSounds;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.recipe.Ingredient;
@@ -36,7 +37,7 @@ public class ModArmorMaterials {
                     ArmorItem.Type.BOOTS, 0
             ),
             5,
-            SoundEvents.ITEM_ARMOR_EQUIP_GENERIC,
+            RegistryEntry.of(ModSounds.SHIELDS_ARMOR_EQUIP),
             () -> Ingredient.ofItems(ModItems.VOIDSHELL_INGOT),
             0.0f,
             0.0f,
@@ -51,7 +52,7 @@ public class ModArmorMaterials {
                     ArmorItem.Type.BOOTS, 0
             ),
             5,
-            SoundEvents.ITEM_ARMOR_EQUIP_GENERIC,
+            RegistryEntry.of(ModSounds.SHIELDS_ARMOR_EQUIP),
             () -> Ingredient.ofItems(ModItems.VOIDSHELL_INGOT),
             0.0f,
             0.1f,
@@ -66,7 +67,7 @@ public class ModArmorMaterials {
                     ArmorItem.Type.BOOTS, 0
             ),
             5,
-            SoundEvents.ITEM_ARMOR_EQUIP_GENERIC,
+            RegistryEntry.of(ModSounds.SHIELDS_ARMOR_EQUIP),
             () -> Ingredient.ofItems(ModItems.VOIDSHELL_INGOT),
             0.0f,
             0.0f,

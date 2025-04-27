@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "nulls_armory:shield_belt"
+    "nulls_armory:shield_belt",
+    "nulls_armory:capacitor_belt"
   ]
 }

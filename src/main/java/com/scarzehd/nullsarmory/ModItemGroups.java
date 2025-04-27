@@ -20,7 +20,11 @@ public class ModItemGroups {
                 entries.add(ModItems.CRUCIBLE);
                 entries.add(ModItems.ORTHOS_PRIME);
                 entries.add(ModItems.SHIELD_BELT);
+                entries.add(ModItems.CAPACITOR_BELT);
                 entries.add(ModItems.TRUE_KNIFE);
+                entries.add(ModItems.YOSHIMITSU_BANNER);
+                entries.add(ModItems.HELLKITE_CLAWS);
+                entries.add(ModItems.VOID_COMPASS);
 
                 entries.add(ModItems.STARMAN_HELMET);
                 entries.add(ModItems.STARMAN_CHESTPLATE);
@@ -43,6 +47,7 @@ public class ModItemGroups {
                 entries.add(ModItems.TRENCH_BOOTS);
 
                 entries.add(ModBlocks.VOID_ORE.asItem());
+                entries.add(ModBlocks.NULL_MARROW.asItem());
             }).build());
 
     public static void registerItemGroups() {

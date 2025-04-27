@@ -58,7 +58,7 @@ public class ShieldsComponent implements IShieldsComponent {
                 rechargeTimer--;
             } else {
                 setCurrentShields(shields + 1);
-                rechargeTimer = (int)Math.round(provider.getAttributeValue(ModAttributes.SHIELDS_RECHARGE_RATE));
+                rechargeTimer = (int)Math.max(Math.round(provider.getAttributeValue(ModAttributes.SHIELDS_RECHARGE_RATE)), 1);
             }
         }
 
@@ -85,7 +85,7 @@ public class ShieldsComponent implements IShieldsComponent {
 
     @Override
     public void setCurrentRechargeDelay(int delay) {
-        rechargeDelay = delay;
+        rechargeDelay = Math.max(1, delay);
         ModComponents.SHIELDS.sync(provider);
     }
 
@@ -121,9 +121,10 @@ public class ShieldsComponent implements IShieldsComponent {
         } else if (shields > oldShields && !soundManager.isPlaying(rechargeSound)) {
             soundManager.play(rechargeSound);
         } else if (shields <= 0 && shields < oldShields) {
-            soundManager.play(new PositionedSoundInstance(ModSounds.SHIELDS_BREAK, SoundCategory.PLAYERS, 1f, 1f, Random.create(), new BlockPos(0, 0, 0)) {{
-                this.relative = true;
-            }});
+            provider.playSound(ModSounds.SHIELDS_BREAK);
+//            soundManager.play(new PositionedSoundInstance(ModSounds.SHIELDS_BREAK, SoundCategory.PLAYERS, 1f, 1f, Random.create(), new BlockPos(0, 0, 0)) {{
+//                this.relative = true;
+//            }});
         }
     }
 }

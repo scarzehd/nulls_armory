@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " vg",
+    "vsv",
+    "gv "
+  ],
+  "key": {
+    "v": {
+      "item": "nulls_armory:voidshell_ingot"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    },
+    "g": {
+      "item": "minecraft:gold_ingot"
+    }
+  },
+  "result": {
+    "id": "nulls_armory:orthos_prime"
+  }
+}
