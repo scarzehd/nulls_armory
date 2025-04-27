@@ -15,8 +15,8 @@ Pain begets pain. The higher your Level, the higher the Violence.
 ### Yoshimitsu's Banner
 A banner specialized in stealing souls. Experience gained is multiplied and restores health.
 
-### Dragon Fangs
-
+### Hellkite Claws
+Lifted from The Thousand Hands Guild, these claws boast an impressive attack speed and range. Weild one of these claws in each hand to engage in Dragon Fangs, a stance which sacrifices health for further lethality.
 
 ### Shield Armors
 The Trench Resonator for strength, the SC-Scout for agility, and the Starman for balance. The Void has given these armors the special ability to generate Shields to protect their wearer. Each armor set has different max shields, recharge time, recharge delay, and overflow. When your shields are broken, take cover and wait for your shields to replenish, as excess damage will increase the delay.
