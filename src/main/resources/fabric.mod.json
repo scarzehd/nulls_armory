@@ -3,10 +3,11 @@
 	"id": "nulls_armory",
 	"version": "${version}",
 	"name": "Null's Armory",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "Null is coming. You must prepare.",
 	"authors": [
 		"S. C. Arzehd",
-		"ChromiumWorldsmith"
+		"ChromiumWorldsmith",
+		"Spubbily01"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",

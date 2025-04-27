@@ -1,17 +1,11 @@
 package com.scarzehd.nullsarmory.item.custom;
 
-import com.scarzehd.nullsarmory.NullsArmory;
 import com.scarzehd.nullsarmory.effect.ModStatusEffects;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
-import net.minecraft.entity.damage.DamageTypes;
 import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.SwordItem;
-import net.minecraft.item.ToolMaterial;
 import net.minecraft.util.math.random.Random;
 
 import java.util.Collection;
@@ -49,8 +43,9 @@ public class OrthosPrimeSwordItem extends Item {
 //    }
     @Override
     public float getBonusAttackDamage(Entity target, float baseAttackDamage, DamageSource damageSource) {
-        if (target instanceof LivingEntity living) {
+        if (target.isInvulnerableTo(damageSource)) return 0;
 
+        if (target instanceof LivingEntity living) {
             Collection<StatusEffectInstance> targetEffects = living.getStatusEffects();
 
             float damageMultiplier = 0f;
@@ -61,7 +56,7 @@ public class OrthosPrimeSwordItem extends Item {
 
             Random random = Random.createLocal();
             if (random.nextFloat() < statusChance) {
-                living.addStatusEffect(new StatusEffectInstance(ModStatusEffects.BLEED, 160, 1)); // BUFFED
+                living.addStatusEffect(new StatusEffectInstance(ModStatusEffects.BLEED, 160, 0)); // BUFFED
             }
 
             return baseAttackDamage * damageMultiplier;

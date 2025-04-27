@@ -4,9 +4,11 @@ import com.scarzehd.nullsarmory.attribute.ModAttributes;
 import com.scarzehd.nullsarmory.sound.ModSounds;
 import com.scarzehd.nullsarmory.sound.RechargeSoundHandler;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.network.RegistryByteBuf;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.sound.SoundCategory;
 
 public class ShieldsComponent implements IShieldsComponent {
     private double shields = 0;
@@ -59,7 +61,19 @@ public class ShieldsComponent implements IShieldsComponent {
 
     @Override
     public void setCurrentShields(double shields) {
+        double oldShields = this.shields;
+
         this.shields = Math.min(shields, provider.getAttributeValue(ModAttributes.MAX_SHIELDS));
+
+        if (shields == oldShields) return;
+
+        if (shields >= provider.getAttributeValue(ModAttributes.MAX_SHIELDS)) {
+            provider.getWorld().playSound(null, provider.getBlockPos(), ModSounds.SHIELDS_RECHARGE_COMPLETE, SoundCategory.PLAYERS, 1.0f, 1.0f);
+        } else if (shields <= 0 && shields < oldShields) {
+            provider.getWorld().playSound(null, provider.getBlockPos(), ModSounds.SHIELDS_BREAK, SoundCategory.PLAYERS, 1.0f, 1.0f);
+        }
+
+
         ModComponents.SHIELDS.sync(provider);
     }
 
@@ -89,18 +103,16 @@ public class ShieldsComponent implements IShieldsComponent {
         double oldShields = shields;
         IShieldsComponent.super.applySyncPacket(buf);
 
-        if (shields == oldShields) return;
+        if (provider instanceof PlayerEntity player) {
+            if (player.isMainPlayer()) {
 
-        if (shields < oldShields)
-            RechargeSoundHandler.instance.stop();
-
-        if (shields >= provider.getAttributeValue(ModAttributes.MAX_SHIELDS)) {
-            provider.playSound(ModSounds.SHIELDS_RECHARGE_COMPLETE);
-            RechargeSoundHandler.instance.stop();
-        } else if (shields > oldShields) {
-            RechargeSoundHandler.instance.start();
-        } else if (shields <= 0 && shields < oldShields) {
-            provider.playSound(ModSounds.SHIELDS_BREAK);
+                if (shields > oldShields) {
+                    RechargeSoundHandler.instance.start();
+                }
+                if (shields >= provider.getAttributeValue(ModAttributes.MAX_SHIELDS) || shields < oldShields) {
+                    RechargeSoundHandler.instance.stop();
+                }
+            }
         }
     }
 }
