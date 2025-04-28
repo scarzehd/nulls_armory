@@ -1,22 +1,24 @@
 package com.scarzehd.nullsarmory.item.custom;
 
 import com.scarzehd.nullsarmory.effect.ModStatusEffects;
+import com.scarzehd.nullsarmory.item.ModToolMaterials;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.item.Item;
+import net.minecraft.item.SwordItem;
 import net.minecraft.util.math.random.Random;
 
 import java.util.Collection;
 
-public class OrthosPrimeSwordItem extends Item {
+public class OrthosPrimeSwordItem extends UnbreakableSwordItem {
     private final float statusChance = .25f;
 
     private final float statusDamageModifier = .25f;
 
     public OrthosPrimeSwordItem(Settings settings) {
-        super(settings);
+        super(ModToolMaterials.VOIDSHELL, settings);
     }
 
 //    @Override

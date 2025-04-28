@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "nulls_armory:orthos_prime",
+    "nulls_armory:true_knife",
+    "nulls_armory:hellkite_claws",
+    "nulls_armory:crucible",
+    "nulls_armory:yoshimitsu_banner"
+  ]
+}
