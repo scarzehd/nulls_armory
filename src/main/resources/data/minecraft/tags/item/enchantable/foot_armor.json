@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "nulls_armory:starman_boots",
+    "nulls_armory:scout_boots",
+    "nulls_armory:trench_boots"
+  ]
+}

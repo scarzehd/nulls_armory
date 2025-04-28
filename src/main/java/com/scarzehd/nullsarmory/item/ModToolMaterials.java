@@ -10,7 +10,7 @@ import net.minecraft.registry.tag.TagKey;
 import java.util.function.Supplier;
 
 public enum ModToolMaterials implements ToolMaterial {
-    VOIDSHELL(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 3500, 9.0F, 0.0F, 15, () -> Ingredient.ofItems(ModItems.VOIDSHELL_INGOT));
+    VOIDSHELL(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 0, 9.0F, 0.0F, 15, () -> Ingredient.ofItems(ModItems.VOIDSHELL_INGOT));
 
     private final TagKey<Block> inverseTag;
     private final int itemDurability;

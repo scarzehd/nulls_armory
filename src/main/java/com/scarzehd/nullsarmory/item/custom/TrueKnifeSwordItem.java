@@ -1,6 +1,7 @@
 package com.scarzehd.nullsarmory.item.custom;
 
 import com.scarzehd.nullsarmory.NullsArmory;
+import com.scarzehd.nullsarmory.item.ModToolMaterials;
 import net.minecraft.component.ComponentMap;
 import net.minecraft.component.ComponentType;
 import net.minecraft.component.DataComponentTypes;
@@ -25,9 +26,9 @@ import net.minecraft.world.World;
 import java.util.List;
 import java.util.UUID;
 
-public class TrueKnifeSwordItem extends Item {
+public class TrueKnifeSwordItem extends UnbreakableSwordItem {
     public TrueKnifeSwordItem() {
-        super(new Item.Settings().maxCount(1)
+        super(ModToolMaterials.VOIDSHELL, new Item.Settings().maxCount(1)
                 .attributeModifiers(AttributeModifiersComponent.builder()
                         .add(EntityAttributes.GENERIC_ATTACK_SPEED, new EntityAttributeModifier(BASE_ATTACK_SPEED_MODIFIER_ID, 2.5, EntityAttributeModifier.Operation.ADD_VALUE), AttributeModifierSlot.MAINHAND)
                         .build()));
