@@ -11,9 +11,9 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.SwordItem;
 
-public class HellkiteClawsItem extends UnbreakableSwordItem {
+public class HellkiteClawsItem extends Item {
     public HellkiteClawsItem() {
-        super(ModToolMaterials.VOIDSHELL, new Item.Settings()
+        super(new Item.Settings()
             .attributeModifiers(AttributeModifiersComponent.builder()
                     .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, new EntityAttributeModifier(BASE_ATTACK_DAMAGE_MODIFIER_ID, 6f, EntityAttributeModifier.Operation.ADD_VALUE), AttributeModifierSlot.MAINHAND)
                     .add(EntityAttributes.GENERIC_ATTACK_SPEED, new EntityAttributeModifier(BASE_ATTACK_SPEED_MODIFIER_ID, -1f, EntityAttributeModifier.Operation.ADD_VALUE), AttributeModifierSlot.MAINHAND)

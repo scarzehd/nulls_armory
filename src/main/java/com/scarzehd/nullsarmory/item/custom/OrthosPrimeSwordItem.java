@@ -12,13 +12,13 @@ import net.minecraft.util.math.random.Random;
 
 import java.util.Collection;
 
-public class OrthosPrimeSwordItem extends UnbreakableSwordItem {
+public class OrthosPrimeSwordItem extends Item {
     private final float statusChance = .25f;
 
     private final float statusDamageModifier = .25f;
 
     public OrthosPrimeSwordItem(Settings settings) {
-        super(ModToolMaterials.VOIDSHELL, settings);
+        super(settings);
     }
 
 //    @Override

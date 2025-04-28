@@ -1,23 +1,20 @@
 package com.scarzehd.nullsarmory.item.custom;
 
-import com.scarzehd.nullsarmory.item.ModToolMaterials;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.SwordItem;
-import net.minecraft.item.ToolMaterial;
 import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.text.Text;
 import net.minecraft.world.World;
 
 import java.util.List;
 
-public class CrucibleSwordItem extends UnbreakableSwordItem {
+public class CrucibleSwordItem extends Item {
     private static final float NETHER_MOB_DAMAGE_MODIFIER = 2f; // the damage against nether mobs expressed as a multiplier of the base damage
 
     public CrucibleSwordItem(Settings settings) {
-        super(ModToolMaterials.VOIDSHELL, settings);
+        super(settings);
     }
 
     @Override
