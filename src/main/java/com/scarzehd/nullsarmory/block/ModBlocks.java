@@ -21,7 +21,7 @@ public class ModBlocks {
         return registered_block;
     }
 
-    public static final Block VOID_ORE = registerBlock("void_ore", new Block(AbstractBlock.Settings.create().hardness(4.5f).resistance(3.0f))); // WHY is it .create() but FabricItemSettings is just a regular-ass constructor AAAAGH
+    public static final Block VOID_ORE = registerBlock("void_ore", new Block(AbstractBlock.Settings.create().hardness(4.5f).resistance(3.0f).requiresTool())); // WHY is it .create() but FabricItemSettings is just a regular-ass constructor AAAAGH
 
     public static final Block NULL_MARROW = registerBlock("null_marrow", new Block(AbstractBlock.Settings.create().hardness(45.0f).resistance(10.0f)));
 }
