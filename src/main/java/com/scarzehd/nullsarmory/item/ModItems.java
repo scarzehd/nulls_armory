@@ -23,7 +23,7 @@ public class ModItems {
 
     public static final Item CRUCIBLE = registerItem("crucible", new CrucibleSwordItem(new Item.Settings().maxCount(1).attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.DIAMOND, 8, -3f))));
 
-    public static final Item ORTHOS_PRIME = registerItem("orthos_prime", new OrthosPrimeSwordItem(new Item.Settings().maxCount(1).maxDamage(1000).attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.DIAMOND, 5, -1f))));
+    public static final Item ORTHOS_PRIME = registerItem("orthos_prime", new OrthosPrimeSwordItem(new Item.Settings().maxCount(1).attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.DIAMOND, 1, -1f))));
 
     public static final Item YOSHIMITSU_BANNER = registerItem("yoshimitsu_banner", new YoshimitsuBannerItem());
 
