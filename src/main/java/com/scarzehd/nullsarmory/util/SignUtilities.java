@@ -41,6 +41,7 @@ public class SignUtilities {
         SignText signText = new SignText();
 
         for (int i = 0; i < texts.size(); i++) {
+            if (i > 3) break;
             signText = signText.withMessage(i, texts.get(i));
         }
 
