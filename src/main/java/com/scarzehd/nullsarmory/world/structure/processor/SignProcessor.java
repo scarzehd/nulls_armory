@@ -48,12 +48,11 @@ public class SignProcessor extends StructureProcessor {
         PART_A.add("There is a place which");
         PART_A.add("In this lull, we honor he who");
         PART_A.add("Watch out for the man who");
-        PART_A.add("Listen to the calls of that which");
         PART_B.add("bears no soul");
         PART_B.add("bears blackened eyes");
         PART_B.add("rules over nothing");
         PART_B.add("came from the other world");
-        PART_B.add("saw the truth of our existence");
+        PART_B.add("saw the truth of reality");
         PART_B.add("reached the end");
     }
 
