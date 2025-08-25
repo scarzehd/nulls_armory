@@ -15,7 +15,7 @@ public class HellkiteClawsItem extends Item {
     public HellkiteClawsItem() {
         super(new Item.Settings()
             .attributeModifiers(AttributeModifiersComponent.builder()
-                    .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, new EntityAttributeModifier(BASE_ATTACK_DAMAGE_MODIFIER_ID, 6f, EntityAttributeModifier.Operation.ADD_VALUE), AttributeModifierSlot.MAINHAND)
+                    .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, new EntityAttributeModifier(BASE_ATTACK_DAMAGE_MODIFIER_ID, 8f, EntityAttributeModifier.Operation.ADD_VALUE), AttributeModifierSlot.MAINHAND)
                     .add(EntityAttributes.GENERIC_ATTACK_SPEED, new EntityAttributeModifier(BASE_ATTACK_SPEED_MODIFIER_ID, -1f, EntityAttributeModifier.Operation.ADD_VALUE), AttributeModifierSlot.MAINHAND)
                     .build())
                 .maxCount(1));
@@ -24,7 +24,7 @@ public class HellkiteClawsItem extends Item {
     @Override
     public float getBonusAttackDamage(Entity target, float baseAttackDamage, DamageSource damageSource) {
         if (damageSource.getAttacker() instanceof PlayerEntity player && player.getOffHandStack().getItem().equals(this)) {
-            return 5.0f;
+            return 8.0f;
         }
         return 0.0f;
     }
