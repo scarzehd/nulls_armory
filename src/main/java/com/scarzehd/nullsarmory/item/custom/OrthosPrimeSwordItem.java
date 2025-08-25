@@ -13,9 +13,9 @@ import net.minecraft.util.math.random.Random;
 import java.util.Collection;
 
 public class OrthosPrimeSwordItem extends Item {
-    private final float statusChance = .25f;
+    private final float statusChance = 1f;
 
-    private final float statusDamageModifier = .25f;
+    private final float statusDamageModifier = .5f;
 
     public OrthosPrimeSwordItem(Settings settings) {
         super(settings);

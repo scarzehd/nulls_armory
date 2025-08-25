@@ -34,8 +34,8 @@ public class TrueKnifeSwordItem extends Item {
                         .build()));
     }
 
-    private static final double curveScaleX = 0.4;
-    private static final double curveScaleY = 7;
+//    private static final double curveScaleX = 0.4;
+//    private static final double curveScaleY = 7;
 
     public static final Identifier modifierId = Identifier.of(NullsArmory.MOD_ID, "monster_killer");
 
@@ -45,7 +45,7 @@ public class TrueKnifeSwordItem extends Item {
             if (entity instanceof PlayerEntity player) {
                 AttributeModifiersComponent attributeModifiers = stack.getOrDefault(DataComponentTypes.ATTRIBUTE_MODIFIERS, AttributeModifiersComponent.DEFAULT);
 
-                double value = Math.floor(curveScaleY * Math.log10((curveScaleX * player.experienceLevel) + 1) * 2)/2;
+                double value = Math.floor(0.3 * player.experienceLevel * 2)/2;
 
                 EntityAttributeModifier modifier = new EntityAttributeModifier(modifierId, value, EntityAttributeModifier.Operation.ADD_VALUE);
 
